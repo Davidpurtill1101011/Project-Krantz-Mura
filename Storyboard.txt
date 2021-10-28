@@ -1,0 +1,59 @@
+#### Chapter 1
+## Environment
+>@ Prison Camp
+
+>> Global Objects
+> Bunks
+> Cabin walls
+> Windows
+> Main Eating table ????
+> Chairs
+> wooden floor
+> lighting is from outside
+> Door / doorway
+
+
+
+### Scene 1
+> In Sleeping/Living quarters/cabin
+>> Characters x 1
+>>> Gillie
+> lying on his bunk
+> awakes form sleep
+> moves to sitting on side of bunk
+> elbows on laps
+> rubbing hands throught hair
+> stands up (Predetermined / Player Input)
+
+>> Gillie
+> Character Description ie 1000 yard stare 
+> Attire = Prison 1
+
+>> Personal look
+> good crop of hair
+> clean cut
+> stubble 
+
+>> Bunk Design 
+> Wooded framed bed
+> Mattress
+> Brown blanket
+> Pillow
+
+# Scene 1 Commentary
+Inside sleeping quarters...
+
+# Camera View
+> Camera looking down at Gillie on bunk
+> camera action???
+
+
+### Scene 2
+>> Characters x 2
+> Gillie / Brinks
+>
+
+
+# Chapter 2
+
+# Chapter 3
