@@ -1,12 +1,12 @@
 # Characters
 
-# Gillie
+# Gillie Constant Look
 > Male
 > White
-> Tanned ?? 
 > height 5:10
 > Slim build
-> 
+> Tanned
+
 
 # Attire 1
 > Prison Attire 1
