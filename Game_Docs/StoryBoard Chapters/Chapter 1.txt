@@ -83,8 +83,7 @@ Inside sleeping quarters...
 > bridge
 >>
 > PGcontact
- 
- daves change 
+
 # End Scene 2
 
 
