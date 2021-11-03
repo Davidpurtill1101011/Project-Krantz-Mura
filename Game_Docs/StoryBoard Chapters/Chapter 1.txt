@@ -59,7 +59,6 @@ Inside sleeping quarters...
 > S1 ends with sound of door closing behind
 > Brinks something
 
-### This is Walter's change
 # End Scene 1
 
 =================================================
