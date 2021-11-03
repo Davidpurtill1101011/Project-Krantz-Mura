@@ -82,7 +82,7 @@ Inside sleeping quarters...
 > bridge
 >>
 > PGcontact
-
+hello Walter
 # End Scene 2
 
 
