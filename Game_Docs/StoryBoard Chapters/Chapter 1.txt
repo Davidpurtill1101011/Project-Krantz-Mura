@@ -59,7 +59,6 @@ Inside sleeping quarters...
 > S1 ends with sound of door closing behind
 > Brinks something
 
-## Walter to Dave
 # End Scene 1
 
 =================================================
@@ -83,7 +82,7 @@ Inside sleeping quarters...
 > bridge
 >>
 > PGcontact
-hello Walter
+
 # End Scene 2
 
 
