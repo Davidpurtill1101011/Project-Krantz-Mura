@@ -1,59 +1,26 @@
-#### Chapter 1
+#### Chapter 2
 ## Environment
 >@ Prison Camp
-
->> Global Objects
-> Bunks
-> Cabin walls
-> Windows
-> Main Eating table ????
-> Chairs
-> wooden floor
-> lighting is from outside
-> Door / doorway
-
-
-
-### Scene 1
-> In Sleeping/Living quarters/cabin
->> Characters x 1
->>> Gillie
-> lying on his bunk
-> awakes form sleep
-> moves to sitting on side of bunk
-> elbows on laps
-> rubbing hands throught hair
-> stands up (Predetermined / Player Input)
-
->> Gillie
-> Character Description ie 1000 yard stare 
-> Attire = Prison 1
-
->> Personal look
-> good crop of hair
-> clean cut
-> stubble 
-
->> Bunk Design 
-> Wooded framed bed
-> Mattress
-> Brown blanket
-> Pillow
-
-# Scene 1 Commentary
-Inside sleeping quarters...
-
-# Camera View
-> Camera looking down at Gillie on bunk
-> camera action???
-
-
-### Scene 2
->> Characters x 2
-> Gillie / Brinks
->
-
-
-# Chapter 2
-
-# Chapter 3
+# Day time
+# Sunny
+# Hot
+# Gillie Attire: Attire 1
+# Gillie and Captain go to top house
+# Gillie meets Head man
+# Head-man wants to talk to captain about fight that happened in camp
+# Gillie listens in but for information.
+# Gillie goes looking around in the rooms on the current floor 
+# Takes small items that might be needed in downtown.
+# Gillie finds a way into Top house if needed in future.
+# Gillie add Captain return to camp
+# Captain asks Gillie to go into the village to get some items for the men Ie: Cigs,moonshine and medical supplies
+# Gillie asks Tanaka Son where the local doctors is in the village
+# Captain talks with Gillie about getting medicine for one of the me(needs name?)
+# Gillie leaves for the village
+# Climbs tree and then into the gap for the cave
+# Gets to cache and changes Attire to: Attire 2
+# Must try and aquire a map of the area while in village(or maybe have him draw one from a vantage point)
+# Must sneak through village to find/get to doctors
+# Gillie must also sneak onto a ship to get something for Tanaka
+# Go and meet lover/friend in village
+# 
