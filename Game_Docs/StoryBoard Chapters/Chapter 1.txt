@@ -1,89 +1,58 @@
 #### Chapter 1
-
-### Local Environment
+# Environment
 >@ Prison Camp
->>> Prisioners Quarters / Downtown / District 3
+# Morning time
+# Sunny
+# Hot / Balmy
+# Gillie Attire: Attire 1
+# Gillie in Jailhouse
+# Gillie sitting on slabbed floor looking down
+# PG Mosikio enters Jailhouse throught door and leaves door open
+# Gillie looks up at Mosikio
+# Mosikio says "get up, you must go to Tanaka Son, he waits at bridge for you"
+# Gillie walks towards door and exits Jailhouse
+# Mosikio follows him out the door
+# Gillie walks across the raised walkway towards the bridge
+# Gillie sees Tanaka at the bridge looking into river
+# As Gillie nears bridge Tanaka looks up and turns to Gillie
+# Tanaka rifles butts Gillie into the stomach
+# Gillie bends over in pain
+# Tanaka commands Mosikio to leave them
+# Tanaka says "why you say to Mosikio you can get him stuff"
+# Gillie says "what?"
+# Tanaka say to Gillie "you are stupid man yes?"
+# Gillie says "what?"
+# Tanaka rifle butts him again into the stomach
+# Tanaka says "you are stupid man yes?"
+# Gillie says "yes, i am a stupid man Tanaka Son"
+# Tanaka says "why you come back when you escape, why you not stay free, why you not go?"
+# Gillie says "go where?"
+# Tanaka looks back into the river and pauses
+# Tanaka then turns back and looks at Gillie
+# Tanaka says "you stupid man, tell Mosikio you can get stuff"
+# Gillie says "well yes, but only certain things"
+# Tanaka "now Mosikio knows"
+# Tanaka rifle butts him again into the stomach
+# Tanaka says to Gillie "go...no more stupid man!"
+# Gillie turns and heads back to his quarters, he is sloughed over holding his abdomen
+# He passes Mosikio on the way
+# POW Brinks intercepts Gillie in the walkway and says "Captain wants to talk to you"
+# Brinks walks off in direction of Captain's quarters 
+# Gillie pauses then walks after him
+# Gillie enter Captain's quarters
+# 
+Captain says to Gillie "you need to get "
 
->> Global Objects
-> Bunks
-> Cabin walls
-> Windows
-> Main Eating table ????
-> Chairs
-> Wooden floor
-> Lighting is from outside / Oil / candle lit lamps
-> Door / doorway
-> Hard Sand/Dirt
-> 
+# Gillie says to captain "games up, Tanaka knows"
+# Captain say to Gillie "of course he knows, how do you think you get in and out?"
+# 
 
-### Scene 1
-> In Sleeping/Living quarters/cabin
->> Characters x 1
->>> Carl Gilligan (Gillie)
-> lying on his bunk
-> awakes form sleep (mosique)
-> moves to sitting on side of bunk
-> elbows on laps
-> rubbing hands throught hair
-> stands up (Predetermined / Player Input)
-
->> Gillie
-> #Attire = Prison 1
-> Scene 1 Personal Look
-> #Gillie Constant Look
-> Scene 1 On-the-Fly
-> good crop of hair
-> clean cut
-> stubble 
-> sweaty
-
->> Bunk Design 
-> Wooded framed bed
-> Mattress - tinnish/basic
-> Brown blanket
-> Pillow
-
-# Scene 1 Commentary / Overview
-Inside sleeping quarters...
-
-# Camera View
-> Camera looking down at Gillie on bunk
-
-> Entering Guard
-> Character Description ie, Deadpan stare
-
->> 
->> Characters x 2
-> Gillie / Brinks
-> 
-> S1 ends with sound of door closing behind
-> Brinks something
-
-# End Scene 1
-
-=================================================
-# Start Scene 2
-
-# Overview
->>> What's he doing : heading over to PGcontact
->> Gillie demeanour
->> Guard's demeanour
-> outside of cabin
-> step down 2 step
-> on parade ground raised path/ leading to PGcontact
->@ What he sees****
-> prisioner hanging and getting whipped
-> D3 waterfall
->>
-> D3 pool
->> 
-> stream
->> 
-> bridge
->>
-> PGcontact
-
-# End Scene 2
+# divisions within pow camp among different nations
+# chapter ends with fight among the pow factions
+Chapter 1 End
 
 
-# Start Scene 3
+
+
+
+
