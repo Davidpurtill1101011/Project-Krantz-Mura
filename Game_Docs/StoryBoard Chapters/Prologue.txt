@@ -1,0 +1,52 @@
+### Prologue Outline
+
+# Gillie Attire
+# Attire 2(check Object Design)
+
+# Gillie on mission to get to time of a particular ship due to arrive at harbour.
+# Night time
+# Dark
+# Raining
+# Gillie on edge village above harbour
+# Stevedore's office down in harbour
+# he must sneak to stevedore office via the village to break into stevedore's office to get shipping time.
+# takes mental note of arrival time of ship
+# gets in throught unlocked sash window
+# Shipping time on wall
+# leaves office
+# as he makes his way from the harbour a guard dog barks
+# he must avoid detection
+# he runs and hide behind barrels in shadows
+# guard checks out area, doesn't spot Gillie
+# Gillie then sneaks out and up into village
+# From village he make his way back towards prison camp
+# Runs up hill
+# Comes to patrol check point which is on road
+# must crawl under check point cabin (as first person)
+# must time run on exiting cabin to elude guard
+# make into forest
+# topology of undulating
+# river where a fallen tree spans river acts as bridge where he crosses
+# hear noises of river
+# hear owl/crickets/night predator
+# Gillie jogs to concealed cave which his escape route to and from camp
+# here is has his cache which consists of prison and casual clothes, boots, beanie hat, watch, knife, satchel, rifle scope.
+# changes into prison clothes
+# moves throught cave and exits on prison camp side
+# sees it has stopped raining
+# "fine time to stop raining"
+# climbs down tree
+# he then gets caught by the prison guard Tanaka Son
+# Both are taken by suprise
+# Tanaka Son hit Gillie with butt of rifle
+# Gillie falls to ground
+# Tanaka Son goes to hit him again
+# Gillie raise hand, says "hang on, i can get you stuff"
+# Tanaka say "what do you mean, what stuff"?
+# Gillie replies "anything you want"
+# Tanaka says "so you're the contraban man"
+# Gillie says "Yea that's me"
+# Tanaka says "is that right"
+# Tanaka rifle butts Gillie to the head and knocks out Gillie
+
+### End Prologue
