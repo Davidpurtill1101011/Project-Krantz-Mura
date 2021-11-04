@@ -1,0 +1,40 @@
+## Objects
+# houses
+# ship / gangway
+# boulard / tie up ship
+# road
+# police
+# office
+# dog
+# street/spot lights
+# clipboard
+# windows
+# door
+# desk
+# chair
+# barrels
+# ropes
+# fishing boats
+# fishing net
+# sea
+# light house ?
+# parked military vehicle
+# lights in distance
+# check point truck/barriers/guard house
+# river
+# tree bridge
+# forest
+# cave entrance
+# cache 1
+# prison side cave entrance/exit tree
+# view of camp (objects)
+>@ cabins roofs/guard tower
+# gun
+# Tanaka's Attire?  
+
+## Audio
+# owl sound
+# night - wild live sounds
+# ambience sounds
+
+
