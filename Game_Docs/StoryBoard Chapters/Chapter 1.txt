@@ -36,19 +36,63 @@
 # Tanaka says to Gillie "go...no more stupid man!"
 # Gillie turns and heads back to his quarters, he is sloughed over holding his abdomen
 # He passes Mosikio on the way
-# POW Brinks intercepts Gillie in the walkway and says "Captain wants to talk to you"
-# Brinks walks off in direction of Captain's quarters 
+# POW Jenkins intercepts Gillie in the walkway and says "Cap'n wants to talk to you Gillie."
+# Jenkins walks off in direction of Captain's quarters 
 # Gillie pauses then walks after him
-# Gillie enter Captain's quarters
-# 
-Captain says to Gillie "you need to get "
+# Gillie enters Captain's quarters
+# Description of Captain's cabin:
+    # Multiple bunks
+    # Dinning table
+    # Wooden floor
+    # Windows
+    # Personnel
+        # Captain
+        # Luietenant
+        # Soldiers (privates)
+# Gillie "Cap'n, you were looking for me"
+# Captain ... typical banter first .. bit jovial
+#
+# Captain "how you for malaria tablets"
+# Gillie "how is he?"
+# Captain "not good, he took a turn for the worst last night"
+# Captain "DuPont said he won't last much longer"
+# Gillie "what the fuck does he know"
+# Captain "he's the closest to a medic we have"
+# Gillie " something anti french"
+# Captain "can you get some tonight or.."
+# Gillie says to cap'n "games up, Tanaka knows"
+# Captain "Tanaka? sure of course Tanaka knows, how do you think you get in and out?"
+# Gillie *befuddled* "what are on about"
+# Captain "come-on Gillie wake up and smell the coffee. Look can you go out tonight, we need the stuff?"
+# Gillie "Yes captain Thompson, at your will captain Thompson...."
+# Captain "while your at it don't forget some coffee."
+# Gillie leaves but pauses at Luietenant bunk
+# Gillie "how you holding up"
+# Luietenant "i've been worse"
+# Gillie exits cabin and walks back to his own cabin quarters
+# Continunity:
+    # When he gets there he see Turner, Campbell, Parker and Morris cooking some mutton and mushrooms
+    # The laughter and smell draw the attention of some pow's from another cabin quarters
+    # Three soldiers, DuPont, Leclerc and Rizzo come over and demand some of what they are cooking
+# Leclerc says "you should share the food"
+# Turner says "take a hike Claud this is all we got, there is only enough for us."
+# Leclerc says "you must share, it is the camp rule, we share our with you."
+# Turner says "share what snails! you can keep those and your frogs"
+# Leclerc says "you are a fuck Turner, your people do not know how to cook good food"
+# Turner says "well you won't be wanting any of this then will you Claud"
+# Leclerc says "my name is not Claud!"
+# Turner says "who gives a fuck"
+# Turner cuts some meat and starts eating it
+# Leclerc suddenly kicks Turner into the chest with the sole of his boot
+# Gillie backs away from fight
+# Turner goes flying backwards (knocking over something?)
+# Campbell throws a punch at Rizzo, Rizzo ducks and punches Campbell knocking him to the floor
+# Parker turns to Campbell and says "come on Soup get up"
+# Enter Guards and grab Soup to arrest him
+# Turner says "its their fault, they came looking for a fight"
+# DuPont says "its your fault we are all in this war"
+# Guards arrest Soup, DuPont and throw them into the hole
 
-# Gillie says to captain "games up, Tanaka knows"
-# Captain say to Gillie "of course he knows, how do you think you get in and out?"
-# 
-
-# divisions within pow camp among different nations
-# chapter ends with fight among the pow factions
 Chapter 1 End
 
 
