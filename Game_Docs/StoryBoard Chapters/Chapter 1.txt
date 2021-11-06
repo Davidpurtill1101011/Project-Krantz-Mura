@@ -51,7 +51,6 @@
         # Soldiers (privates)
 # Gillie "Cap'n, you were looking for me"
 # Captain ... typical banter first .. bit jovial
-#
 # Captain "how you for malaria tablets"
 # Gillie "how is he?"
 # Captain "not good, he took a turn for the worst last night"
@@ -94,9 +93,3 @@
 # Guards arrest Soup, DuPont and throw them into the hole
 
 Chapter 1 End
-
-
-
-
-
-

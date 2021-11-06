@@ -5,15 +5,44 @@
 # Sunny
 # Hot
 # Gillie Attire: Attire 1
-# Gillie and Captain go to top house
-# Gillie meets Head man
-# Head-man wants to talk to captain about fight that happened in camp
-# Gillie listens in but for information.
-# Gillie goes looking around in the rooms on the current floor 
-# Takes small items that might be needed in downtown.
-# Gillie finds a way into Top house if needed in future.
+# Gillie and Captain go to top house to meet the super-intendant Toyotomi.
+# Gillie meets super-intendant Toyotomi for the first time since entering the camp.
+# Toyotomi asks Gillie "What is your name ?"
+# Gillie replies "Gillie!"
+# Toyotomi says "what kind of stupid name is Gillie?"
+# Gillie replies "My actual name is ?? 'Gillie' Gilligan and its not a stupid name."
+# Toyotomi says "What was that boy?"
+# Gillie replies "You hea...."
+# Captain Thompson quickly cuts Gillie off and says "Forgive the sargent he seems to have lost himself, =>
+ That is just what we call him your Mikado, Sorry about him he is just a young lad."
+# Toyotomi says "Captain Thompson you are a good man, and a man of respect also"
+# Captain Thompson "You are to kind Mikado Toyotomi, thank you very much tho."
+# Toyotomi asks "Would you men like some tea?"
+# Captain Thompson replies "That would be splended, thank you"
+# Toyotomi orders a maid to go get some chamomile tea
+# Captain Thompson and Toyotomi start talking about the fight that happened earlier during the week and ask =>
+ Gillie to leave the room as Toyotomi was expecting the Luietenant.
+# Gillie can hear what is being said from outside but also does a small bit of lookinng the house:
+    # from what Gillie can see the house seems to be in somewhat of ruin and distay.
+# Toyotomi says "Captain Thompson why are you men causing so much trouble for me and my men"
+# Captain Thompson replies "I am trying my best sir but you know how things are these men are made to fight"
+# Toyotomi says "If they were any good at fighting they would have died with honor in battle!"
+# Captain Thompson replies "Well if your guys werent hiding and fighting without honor, And actually fighting =>
+    # us face on we wouldnt be having this talk"
+# Toyotomi says "Well from now if your men want to die with honor will start shooting them if they are out of line and will suffer more than wipping's"
+# The maid returns a short while later
+# Gillie gets called into the room. 
+# The Maid says to Toyotomi "Sorry we are out of chamomile sir"
+# Toyotomi in a blind rage from being called dishonorable takes out a gun a kills the maid where she stands. =>
+    # and tells Gillie and Captain Thompson to get rid of her body.
+# Cpt.Thompson says out of shock "have you gone bloddy mad man!"
+# Gillie and Cpt. Thompson carry the maid downstairs to where the guards take her from there.
 # Gillie add Captain return to camp
-# Captain asks Gillie to go into the village to get some items for the men Ie: Cigs,moonshine and medical supplies
+# Gillie says to Cpt. Thompson "I think I may have found a way in to the house sir".
+# Cpt.Thompson replies "Oh good on you we might be able to use that later on if need be."
+# Captain asks Gillie to go into the village to get some medical supplies for the Luietenant.
+
+
 # Gillie asks Tanaka Son where the local doctors is in the village
 # Captain talks with Gillie about getting medicine for one of the me(needs name?)
 # Gillie leaves for the village
@@ -23,4 +52,3 @@
 # Must sneak through village to find/get to doctors
 # Gillie must also sneak onto a ship to get something for Tanaka
 # Go and meet lover/friend in village
-# 
