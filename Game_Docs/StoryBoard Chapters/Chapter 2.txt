@@ -5,7 +5,15 @@
 # Sunny
 # Hot
 # Gillie Attire: Attire 1
-# Gillie and Captain go to top house to meet the super-intendant Toyotomi.
+# Gillie sees Cpt.Thompson talking with Tanaka by the Krantz(cliff edge).
+    # (everything that Cpt.Thompson and Tanaka talk about is kept under secret and Gillie(the player is on =>
+        # a need to know basis))
+# Cpt.Thompson walks over to Gillie and says "You need to come with me now"
+# Gillie replies "For what ?, Or am I going to be left in the dark about this aswel"
+# Cpt.Thompson says "Your coming to the top with me"
+# Gillie asks "Why me ?"
+# Cpt.Thompson replies "Well Luietenant Meehan cant come with me and your the next in line"
+# Gillie and Captain walk to top house to meet the super-intendant Toyotomi.
 # Gillie meets super-intendant Toyotomi for the first time since entering the camp.
 # Toyotomi asks Gillie "What is your name ?"
 # Gillie replies "Gillie!"
@@ -40,10 +48,16 @@
 # Gillie add Captain return to camp
 # Gillie says to Cpt. Thompson "I think I may have found a way in to the house sir".
 # Cpt.Thompson replies "Oh good on you we might be able to use that later on if need be."
-# Captain asks Gillie to go into the village to get some medical supplies for the Luietenant.
+# Captain asks Gillie to go into the village to get some medical supplies for Lt Meehan.
+# Gillie is also told byt Cpt.Thompson" to go and talk with Tanaka and dont make it so obvious".
+# Gillie meets with Tanaka by the bridge/river/stream/bathing area
+# (this has to be done discreetly)
+# Gillie is told by Tanaka that there is someone he has to meet in the village at a certain time and is given a phrase to say ??
+# Contact will have a reply for the phrase
+# Pharse could be => "The birds will be flying high tomorrow"
+# Reply could be => "Are you a Birdwatcher"
 
 
-# Gillie asks Tanaka Son where the local doctors is in the village
 # Captain talks with Gillie about getting medicine for one of the me(needs name?)
 # Gillie leaves for the village
 # Climbs tree and then into the gap for the cave
@@ -52,3 +66,6 @@
 # Must sneak through village to find/get to doctors
 # Gillie must also sneak onto a ship to get something for Tanaka
 # Go and meet lover/friend in village
+
+
+# Ending for Chapter 2 is that the Luietenant dies.
