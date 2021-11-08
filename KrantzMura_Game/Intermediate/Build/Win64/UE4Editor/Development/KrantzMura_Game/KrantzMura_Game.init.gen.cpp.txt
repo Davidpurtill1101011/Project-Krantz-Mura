@@ -1,0 +1,3 @@
+C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h
+F:\Unreal\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+F:\Unreal\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h

@@ -1,0 +1,2 @@
+C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h
+C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Source\KrantzMura_Game\KrantzMura_Game.h

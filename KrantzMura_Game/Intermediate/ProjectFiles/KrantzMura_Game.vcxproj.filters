@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\KrantzMura_Game.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{1ECC1B12-6EDC-4C34-A4B9-EAAE6A6C8270}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\KrantzMura_Game.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\KrantzMura_GameEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{30A13075-3947-4FE4-9326-20A2A02ED8AF}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\KrantzMura_Game">
+      <UniqueIdentifier>{192CE9CD-9894-4882-86FF-4CCEF5F782C8}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\KrantzMura_Game\KrantzMura_Game.Build.cs">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\KrantzMura_Game\KrantzMura_Game.cpp">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KrantzMura_Game\KrantzMura_Game.h">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KrantzMura_Game\KrantzMura_GameGameModeBase.cpp">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KrantzMura_Game\KrantzMura_GameGameModeBase.h">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h
+C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Source\KrantzMura_Game\KrantzMura_GameGameModeBase.h
+F:\Unreal\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+F:\Unreal\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+F:\Unreal\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+F:\Unreal\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Inc\KrantzMura_Game\KrantzMura_GameGameModeBase.generated.h
