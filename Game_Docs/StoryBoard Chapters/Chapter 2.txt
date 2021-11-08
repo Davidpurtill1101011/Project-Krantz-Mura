@@ -3,7 +3,7 @@
 >@ Prison Camp
 # Day time
 # Sunny
-# Hot
+# Hot and humid
 # Gillie Attire: Attire 1
 # Gillie sees Cpt.Thompson talking with Tanaka by the Krantz(cliff edge).
     # (everything that Cpt.Thompson and Tanaka talk about is kept under secret and Gillie(the player is on =>
@@ -12,7 +12,7 @@
 # Gillie replies "For what ?, Or am I going to be left in the dark about this aswel"
 # Cpt.Thompson says "Your coming to the top with me"
 # Gillie asks "Why me ?"
-# Cpt.Thompson replies "Well Luietenant Meehan cant come with me and your the next in line"
+# Cpt.Thompson replies "Would you rather be mining sulfur"
 # Gillie and Captain walk to top house to meet the super-intendant Toyotomi.
 # Gillie meets super-intendant Toyotomi for the first time since entering the camp.
 # Toyotomi asks Gillie "What is your name ?"
@@ -22,7 +22,7 @@
 # Toyotomi says "What was that boy?"
 # Gillie replies "You hea...."
 # Captain Thompson quickly cuts Gillie off and says "Forgive the sargent he seems to have lost himself, =>
- That is just what we call him your Mikado, Sorry about him he is just a young lad."
+ That is just what we call him your Mikado, Sorry about him he is just a young and impulsive lad, and still needs to learn his place."
 # Toyotomi says "Captain Thompson you are a good man, and a man of respect also"
 # Captain Thompson "You are to kind Mikado Toyotomi, thank you very much tho."
 # Toyotomi asks "Would you men like some tea?"
@@ -37,35 +37,75 @@
 # Toyotomi says "If they were any good at fighting they would have died with honor in battle!"
 # Captain Thompson replies "Well if your guys werent hiding and fighting without honor, And actually fighting =>
     # us face on we wouldnt be having this talk"
-# Toyotomi says "Well from now if your men want to die with honor will start shooting them if they are out of line and will suffer more than wipping's"
-# The maid returns a short while later
-# Gillie gets called into the room. 
-# The Maid says to Toyotomi "Sorry we are out of chamomile sir"
-# Toyotomi in a blind rage from being called dishonorable takes out a gun a kills the maid where she stands. =>
-    # and tells Gillie and Captain Thompson to get rid of her body.
-# Cpt.Thompson says out of shock "have you gone bloddy mad man!"
-# Gillie and Cpt. Thompson carry the maid downstairs to where the guards take her from there.
-# Gillie add Captain return to camp
+# Toyotomi says "Well from now if your men want to die with honor we will start shooting them if they are out of line and will suffer more than wipping's"
+# Gillie can now only hear muffled voices from now being down the hall.
+    # He enters a room and it can have a different outcome for later on(Hitbox by window). 
+# He then trys to enter another room that he can hear radio chatter coming from but he spots the maid returning with the tea.
+# The door is open and Gillie hears the maid speak to Toyotomi => The Maid says to Toyotomi "Emperor my apologise but no more Gunpowder tea, I make chamomile your majesty."
+# Toyotomi in a blind rage from being called dishonorable takes out a gun and points it at the maid
+# The Maid looks up in horror and hands to face
+# And kills the maid where she stands.
+# *Cpt.Thompson steps back in shock and horror
+# Gillie runs in and sees the maids body lying on the floor
+# Cpt.Thompson says out of shock "have you gone bloody mad man!"
+# Toyotomi replies to Cpt.Thompson "Man? "*aims gun at Cpt.Thompson's head without saying a word*.
+# And tells Gillie and Captain Thompson to remove the body.
+# While Gillie and Cpt.Thompson are picking up the body Toyotomi says "Its hard to find good workers"
+# Gillie and Cpt. Thompson carry the maid downstairs to where the guards take her body from there.
+# Gillie and Captain make there way back to camp
+# walk back to camp:
+    # pond in graden surrounded by bonzi trees(japaneses graden), 
+    # steps down  to the Backyard are made from cut stone and see Guards are similar to pow's daily ins and outs
+    # and steps back down are nearly not there any more with it varying from humps to steps (overgrown & hard to climb).
 # Gillie says to Cpt. Thompson "I think I may have found a way in to the house sir".
 # Cpt.Thompson replies "Oh good on you we might be able to use that later on if need be."
-# Captain asks Gillie to go into the village to get some medical supplies for Lt Meehan.
-# Gillie is also told byt Cpt.Thompson" to go and talk with Tanaka and dont make it so obvious".
+# Captain tells Gillie to go into the village to get some medical supplies for Lt Meehan.
+# Gillie is also told by Cpt.Thompson" to go and talk with Tanaka and dont make it so obvious".
+# Gillie replies "Why?"
+# Cpt.Thompson says "Just do it sargent!"
+# *change of body language*
 # Gillie meets with Tanaka by the bridge/river/stream/bathing area
+# Gillie has to find Tanaka.
 # (this has to be done discreetly)
-# Gillie is told by Tanaka that there is someone he has to meet in the village at a certain time and is given a phrase to say ??
-# Contact will have a reply for the phrase
-# Pharse could be => "The birds will be flying high tomorrow"
-# Reply could be => "Are you a Birdwatcher"
-
-
-# Captain talks with Gillie about getting medicine for one of the me(needs name?)
-# Gillie leaves for the village
-# Climbs tree and then into the gap for the cave
-# Gets to cache and changes Attire to: Attire 2
-# Must try and aquire a map of the area while in village(or maybe have him draw one from a vantage point)
-# Must sneak through village to find/get to doctors
-# Gillie must also sneak onto a ship to get something for Tanaka
-# Go and meet lover/friend in village
-
-
+# Gillie is told by Tanaka that there is someone he has to meet in the village at a certain time (after sun down) and is given a phrase to say ??
+# Sees lover/friend at the area he is to meet his Contact and hesitates to approach
+# Gillie says "Niko ?" in a confused way.
+# Niko turns and says "Hello Carl"
+# Gillie says "Is everything alright ? What are..."
+# Niko interjects "The birds will be flying high tomorrow"
+# Gillie replies "What? Are you a Birdwatcher"
+# Gillie follows up with "what are you... why are you..."
+# Niko says "its ok Carl"
+# Niko*takes his hand* places a map and a letter of instructions in Gillies hand.
+# Niko says "Can only be now"
+# Gillie replies "What?, I have to do this now ?"
+# Niko replies "Yes Gillie only now, must do now, later no good"
+# Niko hugs Gillie and says "I love you Carl"
+# Gillie watches her leave.
+# Gillie reads letter and looks at map.
+# Gillie then leaves for the military camp that is further south of the village to and scope out the area 
+# but needs to sabotage some of the AA(Anti-Air guns) as there is a friendly air raid the following night, 
+    # and must also aquire some hanguns.
+# Gillie gets to the camp and does what he needs to do
+# While Gillie is on the way back from the military camp he runs into a patrol of that is heading in the direction of the camp and delays him.
+# He must wait for them to pass or he will be caught and possibly killed.
+# when he gets back to the there is a ship in the dock the area is light up with a flare/lights from ship.
+# he must now sneak down to the doctors to sneak/break in and get some medicine for Lt.Meehan.
+# Must get back before head count at 10pm
+# He gets back with the tablets and gives them to DuPont to threat Lt.Meehan.
+# Gillie asks DuPont "Do you think we got him the medicine in time?"
+# DuPont replies and says "Hopefully but only time will tell."
+# DuPont asks "where did you get the meds ?"
+# Gillie replies "I got them off one of the soldiers i gave him some cigs for it"
+# DuPont says "If we had known they had it we could have got the meds into him a fews days earlier and he would really stand a chance"
+# Gillie replies "I know but the guy was holding out on me and he also made me do some extra work for it so thats why it took so long"
+# Cpt.Thompson walks in and asks "did you get the meds ?"
+# Gillie replies "Yes sir, DuPont here has given the Lt the meds already"
+# Cpt.Thompson says "Good stuff sarge"
+# Gillie replies "I need to talk to you about something in private Cap'n"
+# Cpt.Thompson says "It can wait for the Morning, i think you should get some rest"
+# Gillie protests but the Cpt isnt having any of it so Gillie returns to his quarters and falls alseep thinking about Niko and what happened tonight
+# *the next Morning* Gillie is wolken by Cpt.Thompson.
+# Gillie asks "Is everything alright Sir, do you need me to head out again ?"
+# Cpt.Thompson replies "The Luietenant didnt make it Carl, i thought youd rather hear it from me than the other men as i know ye were i the field alot together."
 # Ending for Chapter 2 is that the Luietenant dies.
