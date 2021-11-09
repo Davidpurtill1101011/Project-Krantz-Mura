@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\KrantzMura_Game.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{201E1EC4-B019-40C8-AB4B-2F44C9B66E26}</UniqueIdentifier>
+      <UniqueIdentifier>{5121E002-9B81-4D29-A5B7-7002AEC9543C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\KrantzMura_Game.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{B3E1D635-C411-4CEC-84E4-008575BE0EDA}</UniqueIdentifier>
+      <UniqueIdentifier>{EB2A9F20-4CC7-4395-ADC7-01D9AA98EBA6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,13 +23,22 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\KrantzMura_Game">
-      <UniqueIdentifier>{237F87A1-CAC6-415B-9383-DD3F520F07EE}</UniqueIdentifier>
+      <UniqueIdentifier>{5E955F6A-3BD6-434F-9DAB-39A8F8EE2090}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\KrantzMura_Game\Gillie.cpp">
       <Filter>Source\KrantzMura_Game</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\KrantzMura_Game\Gillie.h">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KrantzMura_Game\Gillie_GameMode.cpp">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KrantzMura_Game\Gillie_GameMode.h">
       <Filter>Source\KrantzMura_Game</Filter>
     </ClInclude>
     <None Include="..\..\Source\KrantzMura_Game\KrantzMura_Game.Build.cs">
