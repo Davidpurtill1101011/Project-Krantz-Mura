@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define KRANTZMURA_GAME_Gillie_generated_h
 
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_SPARSE_DATA
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_RPC_WRAPPERS
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_RPC_WRAPPERS_NO_PURE_DECLS
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_INCLASS_NO_PURE_DECLS \
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_SPARSE_DATA
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_RPC_WRAPPERS
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_RPC_WRAPPERS_NO_PURE_DECLS
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAGillie(); \
 	friend struct Z_Construct_UClass_AGillie_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AGillie)
 
 
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_INCLASS \
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_INCLASS \
 private: \
 	static void StaticRegisterNativesAGillie(); \
 	friend struct Z_Construct_UClass_AGillie_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AGillie)
 
 
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_STANDARD_CONSTRUCTORS \
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AGillie(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AGillie) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_ENHANCED_CONSTRUCTORS \
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AGillie(AGillie&&); \
@@ -58,28 +58,28 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AGillie)
 
 
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_PRIVATE_PROPERTY_OFFSET
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_21_PROLOG
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_GENERATED_BODY_LEGACY \
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_PRIVATE_PROPERTY_OFFSET
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_17_PROLOG
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_PRIVATE_PROPERTY_OFFSET \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_SPARSE_DATA \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_RPC_WRAPPERS \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_INCLASS \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_STANDARD_CONSTRUCTORS \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_PRIVATE_PROPERTY_OFFSET \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_SPARSE_DATA \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_RPC_WRAPPERS \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_INCLASS \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_GENERATED_BODY \
+#define KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_PRIVATE_PROPERTY_OFFSET \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_SPARSE_DATA \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_INCLASS_NO_PURE_DECLS \
-	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_24_ENHANCED_CONSTRUCTORS \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_PRIVATE_PROPERTY_OFFSET \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_SPARSE_DATA \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_INCLASS_NO_PURE_DECLS \
+	KrantzMura_Game_Source_KrantzMura_Game_Gillie_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

@@ -1,0 +1,17 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-KrantzMura_Game-0021.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Gillie.cpp.obj"
+"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\KrantzMura_Game.cpp.obj"
+"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\KrantzMura_GameGameModeBase.cpp.obj"
+"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Gillie.gen.cpp.obj"
+"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\KrantzMura_Game.init.gen.cpp.obj"
+"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\KrantzMura_GameGameModeBase.gen.cpp.obj"
+"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Default.rc2.res"
+/OUT:"C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.lib"

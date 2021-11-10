@@ -1,19 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\David\Desktop\Project-Krantz-Mura).
-  Creating makefile for KrantzMura_GameEditor (game project files are newer)
-  Parsing headers for KrantzMura_GameEditor
-    Running UnrealHeaderTool "C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\KrantzMura_Game.uproject" "C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\KrantzMura_GameEditor\Development\KrantzMura_GameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\David\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for KrantzMura_GameEditor in 9.8736793 seconds
   Building KrantzMura_GameEditor...
-  Using Visual Studio 2019 14.30.30705 toolchain (G:\Langs\VC\Tools\MSVC\14.30.30705) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 6 actions with 4 processes...
-    [1/6] KrantzMura_Game.init.gen.cpp
-    [2/6] Gillie.cpp
-    [3/6] Gillie.gen.cpp
-    [4/6] UE4Editor-KrantzMura_Game-0002.lib
-       Creating library C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0002.lib and object C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0002.exp
-    [5/6] UE4Editor-KrantzMura_Game-0002.dll
-       Creating library C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0002.suppressed.lib and object C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0002.suppressed.exp
-    [6/6] KrantzMura_GameEditor.target
-  Total time in Parallel executor: 10.80 seconds
-  Total execution time: 25.80 seconds
+  Using Visual Studio 2019 14.31.30818 toolchain (G:\Langs\VC\Tools\MSVC\14.31.30818) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 4 actions with 4 processes...
+    [1/4] Gillie.cpp
+    [2/4] UE4Editor-KrantzMura_Game-0021.lib
+       Creating library C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.lib and object C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.exp
+    [3/4] UE4Editor-KrantzMura_Game-0021.dll
+       Creating library C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.suppressed.lib and object C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.suppressed.exp
+    [4/4] KrantzMura_GameEditor.target
+  Total time in Parallel executor: 3.99 seconds
+  Total execution time: 5.06 seconds

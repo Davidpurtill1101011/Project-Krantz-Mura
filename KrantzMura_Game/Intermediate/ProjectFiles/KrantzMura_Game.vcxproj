@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Invalid|Win32">
       <Configuration>Invalid</Configuration>
@@ -75,11 +75,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4B9F8B6C-09C4-4E37-996D-F90267D6E249}</ProjectGuid>
+    <ProjectGuid>{C5ECFDFB-D6AC-4C75-96C2-923ED06E10E0}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>KrantzMura_Game</RootNamespace>
-    <PlatformToolset>v143</PlatformToolset>
-    <MinimumVisualStudioVersion>17.0</MinimumVisualStudioVersion>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
+    <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
     <NMakeUseOemCodePage>true</NMakeUseOemCodePage>
     <TargetRuntime>Native</TargetRuntime>
   </PropertyGroup>
@@ -96,67 +97,83 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugGame_Editor|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_DebugGame|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_DebugGame|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development_Editor|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Development|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Shipping|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping|Win32'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='IOS_Shipping|x64'" Label="Configuration">
     <ConfigurationType>Makefile</ConfigurationType>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset Condition="'$(VisualStudioVersion)' == '15.0'">v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings" />
@@ -382,26 +399,17 @@
     <ClCompile Include="..\..\Source\KrantzMura_Game\Gillie.cpp">
       <AdditionalIncludeDirectories>$(NMakeIncludeSearchPath);F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\foundation;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\pvd;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\task;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\cooking;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\common;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\extensions;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\geometry;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\clothing;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\nvparameterized;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\legacy;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\PhysX3;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include\autogen;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include\autogen;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\internal\include;</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(SolutionDir)Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h;$(SolutionDir)Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h</ForcedIncludeFiles>
-      <AdditionalOptions>/Yu"$(SolutionDir)Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\KrantzMura_Game\Gillie.h"/>
-    <ClCompile Include="..\..\Source\KrantzMura_Game\Gillie_GameMode.cpp">
-      <AdditionalIncludeDirectories>$(NMakeIncludeSearchPath);F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\foundation;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\pvd;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\task;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\cooking;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\common;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\extensions;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\geometry;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\clothing;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\nvparameterized;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\legacy;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\PhysX3;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include\autogen;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include\autogen;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\internal\include;</AdditionalIncludeDirectories>
-      <ForcedIncludeFiles>$(SolutionDir)Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h;$(SolutionDir)Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h</ForcedIncludeFiles>
-      <AdditionalOptions>/Yu"$(SolutionDir)Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"</AdditionalOptions>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\KrantzMura_Game\Gillie_GameMode.h"/>
     <None Include="..\..\Source\KrantzMura_Game\KrantzMura_Game.Build.cs"/>
     <ClCompile Include="..\..\Source\KrantzMura_Game\KrantzMura_Game.cpp">
       <AdditionalIncludeDirectories>$(NMakeIncludeSearchPath);F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\foundation;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\pvd;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\task;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\cooking;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\common;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\extensions;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\geometry;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\clothing;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\nvparameterized;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\legacy;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\PhysX3;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include\autogen;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include\autogen;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\internal\include;</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(SolutionDir)Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h;$(SolutionDir)Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h</ForcedIncludeFiles>
-      <AdditionalOptions>/Yu"$(SolutionDir)Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\KrantzMura_Game\KrantzMura_Game.h"/>
     <ClCompile Include="..\..\Source\KrantzMura_Game\KrantzMura_GameGameModeBase.cpp">
       <AdditionalIncludeDirectories>$(NMakeIncludeSearchPath);F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\foundation;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\pvd;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PxShared\include\task;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\cooking;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\common;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\extensions;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\geometry;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\clothing;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\nvparameterized;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\legacy;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\include\PhysX3;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\common\include\autogen;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\framework\include\autogen;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\RenderDebug\public;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\general\PairFilter\include;F:\Unreal\UE_4.27\Engine\Source\ThirdParty\PhysX3\APEX_1.4\shared\internal\include;</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(SolutionDir)Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h;$(SolutionDir)Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h</ForcedIncludeFiles>
-      <AdditionalOptions>/Yu"$(SolutionDir)Intermediate\Build\Win64\KrantzMura_GameEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"</AdditionalOptions>
     </ClCompile>
     <ClInclude Include="..\..\Source\KrantzMura_Game\KrantzMura_GameGameModeBase.h"/>
   </ItemGroup>

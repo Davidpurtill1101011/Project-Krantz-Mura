@@ -59,20 +59,20 @@ void EmptyLinkFunctionForGeneratedCodeGillie() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGillie_Statics::NewProp_CameraBoom_MetaData[] = {
 		{ "Category", "Camera" },
-		{ "Comment", "// visible in the Unreal Engine IDE\n" },
+		{ "Comment", "// making the camera boom\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Gillie.h" },
-		{ "ToolTip", "visible in the Unreal Engine IDE" },
+		{ "ToolTip", "making the camera boom" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGillie_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGillie, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGillie_Statics::NewProp_CameraBoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGillie_Statics::NewProp_CameraBoom_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AGillie_Statics::NewProp_FollowCamera_MetaData[] = {
 		{ "Category", "Camera" },
-		{ "Comment", "// * is another way of using pointers\n// visible in the Unreal Engine IDE\n" },
+		{ "Comment", "// * means that it is a type of SpringArm and the U means it will be picked up by GB collection..\n// camera Follows the player\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Gillie.h" },
-		{ "ToolTip", "* is another way of using pointers\nvisible in the Unreal Engine IDE" },
+		{ "ToolTip", "* means that it is a type of SpringArm and the U means it will be picked up by GB collection..\ncamera Follows the player" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGillie_Statics::NewProp_FollowCamera = { "FollowCamera", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AGillie, FollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AGillie_Statics::NewProp_FollowCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AGillie_Statics::NewProp_FollowCamera_MetaData)) };
@@ -107,7 +107,7 @@ void EmptyLinkFunctionForGeneratedCodeGillie() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AGillie, 183442059);
+	IMPLEMENT_CLASS(AGillie, 1900503767);
 	template<> KRANTZMURA_GAME_API UClass* StaticClass<AGillie>()
 	{
 		return AGillie::StaticClass();
