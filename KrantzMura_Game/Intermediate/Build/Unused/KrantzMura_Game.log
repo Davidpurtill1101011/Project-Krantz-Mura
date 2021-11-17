@@ -1,12 +1,17 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\David\Desktop\Project-Krantz-Mura).
+  Parsing headers for KrantzMura_GameEditor
+    Running UnrealHeaderTool "C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\KrantzMura_Game.uproject" "C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\KrantzMura_GameEditor\Development\KrantzMura_GameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\David\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  LogInit: Display: Loading text-based GConfig....
+  Reflection code generated for KrantzMura_GameEditor in 8.5703789 seconds
   Building KrantzMura_GameEditor...
-  Using Visual Studio 2019 14.31.30818 toolchain (G:\Langs\VC\Tools\MSVC\14.31.30818) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 4 actions with 4 processes...
-    [1/4] Gillie.cpp
-    [2/4] UE4Editor-KrantzMura_Game-0021.lib
+  Using Visual Studio 2019 14.29.30137 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 5 actions with 4 processes...
+    [1/5] Gillie.gen.cpp
+    [2/5] Gillie.cpp
+    [3/5] UE4Editor-KrantzMura_Game-0021.lib
        Creating library C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.lib and object C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.exp
-    [3/4] UE4Editor-KrantzMura_Game-0021.dll
+    [4/5] UE4Editor-KrantzMura_Game-0021.dll
        Creating library C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.suppressed.lib and object C:\Users\David\Desktop\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\UE4Editor-KrantzMura_Game-0021.suppressed.exp
-    [4/4] KrantzMura_GameEditor.target
-  Total time in Parallel executor: 3.99 seconds
-  Total execution time: 5.06 seconds
+    [5/5] KrantzMura_GameEditor.target
+  Total time in Parallel executor: 2.98 seconds
+  Total execution time: 12.59 seconds

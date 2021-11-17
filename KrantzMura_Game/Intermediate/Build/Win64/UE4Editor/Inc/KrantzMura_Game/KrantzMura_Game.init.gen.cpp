@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeKrantzMura_Game_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x24F0D732,
-				0xFBC18FE4,
+				0xD7536809,
+				0xBAD182E1,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);

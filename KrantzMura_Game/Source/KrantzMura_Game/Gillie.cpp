@@ -17,13 +17,13 @@ AGillie::AGillie()
 	//Sets the direction we are moving we are moving
 	GetCharacterMovement()->bOrientRotationToMovement = true;
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f);// how much we rotate
-	GetCharacterMovement()->JumpZVelocity = 300.f; //jump height
-	GetCharacterMovement()->AirControl = 0.2f;// how much we can move the player in the air
+	GetCharacterMovement()->JumpZVelocity = 200.f; //jump height
+	//GetCharacterMovement()->AirControl = 0.2f;// how much we can move the player in the air
 
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));// Createing a camera boom
 	CameraBoom->SetupAttachment(RootComponent); // setting this to the root of the heirarchy
 
-	CameraBoom->TargetArmLength = 300.f;// how far away the camera is from the player
+	CameraBoom->TargetArmLength = 450.f;// how far away the camera is from the player
 	CameraBoom->bUsePawnControlRotation = true;
 
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));// Creating the follow camera
@@ -55,7 +55,10 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput); // setting the camera to look up and down
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);// on press the jump happens
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);// on relese we stop the jumping from happening
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);// on relese we stop the jumping from happening#
+
+	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &AGillie::StartCrouching);// on press the jump happens
+	//PlayerInputComponent->BindAction("Crouch", IE_Released, this, &AGillie::StopCrouching);// on relese we stop the jumping from happening#
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AGillie::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AGillie::MoveRight);
@@ -81,4 +84,37 @@ void AGillie::MoveRight(float Value)
 	FVector Dir = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);// making the character move Left or right
 	AddMovementInput(Dir, Value);
 }
+
+void AGillie::StartCrouching()
+{
+	/*if (!GetCharacterMovement()->IsCrouching()) // checking to see if the player is already in the crouch position
+	{
+		GetCharacterMovement()->bWantsToCrouch = true;
+		UE_LOG(LogTemp, Warning, TEXT("Crouching"));
+		GetCharacterMovement()->Crouch();
+	}*/
+
+	if (GetCharacterMovement()->IsCrouching())
+	{
+		UnCrouch();
+
+	}
+	else
+	{
+		Crouch();
+		GetCharacterMovement()->GetNavAgentPropertiesRef().bCanCrouch = true;
+
+	}
+}
+
+/*void AGillie::StopCrouching()
+{
+
+	if (GetCharacterMovement()->IsCrouching()) // checking to see if the player is already in the crouch position
+	{
+		GetCharacterMovement()->bWantsToCrouch = false;
+		UE_LOG(LogTemp, Warning, TEXT("UNCrouching"));
+		GetCharacterMovement()->UnCrouch();
+	}
+}*/
 

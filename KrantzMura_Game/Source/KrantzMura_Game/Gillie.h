@@ -32,6 +32,9 @@ public:
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 
+	void StartCrouching();
+	//void StopCrouching();
+
 	bool isDead;
 
 

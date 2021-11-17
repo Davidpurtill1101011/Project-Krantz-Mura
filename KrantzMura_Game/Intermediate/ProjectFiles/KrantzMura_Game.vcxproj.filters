@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\KrantzMura_Game.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{D2B74228-225F-420B-85BA-4953D77BE4EA}</UniqueIdentifier>
+      <UniqueIdentifier>{8D38FC4F-2FCA-4DC4-9920-E134AC4DED34}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\KrantzMura_Game.Target.cs">
       <Filter>Source</Filter>
@@ -11,8 +11,9 @@
     <None Include="..\..\Source\KrantzMura_GameEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\KrantzMura_Game.code-workspace" />
     <Filter Include="Config">
-      <UniqueIdentifier>{26B35781-D6B7-4DA0-914F-A5ED01B1431F}</UniqueIdentifier>
+      <UniqueIdentifier>{E4AFF3B4-42D5-4CFC-89FF-318C8A8183D3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +28,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\KrantzMura_Game">
-      <UniqueIdentifier>{94C0D98A-7E3B-4B47-8348-FAA1F49E2E14}</UniqueIdentifier>
+      <UniqueIdentifier>{4B4889C3-E2EF-431C-BC80-51A228FE2712}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\KrantzMura_Game\Gillie.cpp">
       <Filter>Source\KrantzMura_Game</Filter>
@@ -48,6 +49,12 @@
       <Filter>Source\KrantzMura_Game</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\KrantzMura_Game\KrantzMura_GameGameModeBase.h">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\KrantzMura_Game\Tanaka.cpp">
+      <Filter>Source\KrantzMura_Game</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\KrantzMura_Game\Tanaka.h">
       <Filter>Source\KrantzMura_Game</Filter>
     </ClInclude>
   </ItemGroup>
