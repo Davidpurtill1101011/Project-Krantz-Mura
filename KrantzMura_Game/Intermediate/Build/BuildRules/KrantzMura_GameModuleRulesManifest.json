@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"C:\\Users\\David\\Desktop\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_Game\\KrantzMura_Game.Build.cs",
-		"C:\\Users\\David\\Desktop\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_Game.Target.cs",
-		"C:\\Users\\David\\Desktop\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_GameEditor.Target.cs"
+		"D:\\zGmitY4_2021\\Applied Project\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_Game\\KrantzMura_Game.Build.cs",
+		"D:\\zGmitY4_2021\\Applied Project\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_Game.Target.cs",
+		"D:\\zGmitY4_2021\\Applied Project\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_GameEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.1"
 }
