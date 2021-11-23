@@ -1103,3 +1103,19 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.11.23-11.23.01:998][224]LogEditorTransaction: Undo Landscape Editing: Sculpt
 [2021.11.23-11.23.04:869][517]Cmd: TRANSACTION UNDO
 [2021.11.23-11.23.04:869][517]LogEditorTransaction: Undo Landscape Editing: Sculpt
+[2021.11.23-11.23.54:217][742]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/KrantzMura_Map" FILE="C:/Users/David/Desktop/Project-Krantz-Mura/KrantzMura_Game/Content/KrantzMura_Map.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2021.11.23-11.23.54:230][742]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2021.11.23-11.23.54:284][742]LogTexture: Display: Building textures: Texture2D_0 (BGRA8, 512X512)
+[2021.11.23-11.23.54:289][742]LogTexture: Display: Building textures: Texture2D_1 (BGRA8, 64X64)
+[2021.11.23-11.23.54:290][742]LogTexture: Display: Building textures: Texture2D_2 (BGRA8, 64X64)
+[2021.11.23-11.23.54:290][742]LogTexture: Display: Building textures: Texture2D_3 (BGRA8, 64X64)
+[2021.11.23-11.23.54:291][742]LogTexture: Display: Building textures: Texture2D_4 (BGRA8, 64X64)
+[2021.11.23-11.23.54:292][742]LogTexture: Display: Building textures: Texture2D_5 (BGRA8, 64X64)
+[2021.11.23-11.23.54:293][742]LogTexture: Display: Building textures: Texture2D_7 (BGRA8, 64X64)
+[2021.11.23-11.23.54:293][742]LogTexture: Display: Building textures: Texture2D_8 (BGRA8, 64X64)
+[2021.11.23-11.23.54:294][742]LogTexture: Display: Building textures: Texture2D_9 (BGRA8, 64X64)
+[2021.11.23-11.23.54:295][742]LogTexture: Display: Building textures: Texture2D_11 (BGRA8, 64X64)
+[2021.11.23-11.23.54:298][742]LogTexture: Display: Building textures: Texture2D_12 (BGRA8, 64X64)
+[2021.11.23-11.23.54:416][742]LogSavePackage: Moving 'C:/Users/David/Desktop/Project-Krantz-Mura/KrantzMura_Game/Saved/KrantzMura_Map49CC206D402E7B0A36425EA73DA738AB.tmp' to 'C:/Users/David/Desktop/Project-Krantz-Mura/KrantzMura_Game/Content/KrantzMura_Map.umap'
+[2021.11.23-11.23.54:442][742]AssetCheck: New page: Asset Save: KrantzMura_Map
+[2021.11.23-11.23.54:442][742]LogContentValidation: Display: Validating World /Game/KrantzMura_Map.KrantzMura_Map
