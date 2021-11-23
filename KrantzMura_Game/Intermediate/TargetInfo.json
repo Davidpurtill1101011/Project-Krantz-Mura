@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "KrantzMura_Game",
-			"Path": "C:\\Users\\David\\Desktop\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_Game.Target.cs",
+			"Path": "D:\\zGmitY4_2021\\Applied Project\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_Game.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "KrantzMura_GameEditor",
-			"Path": "C:\\Users\\David\\Desktop\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_GameEditor.Target.cs",
+			"Path": "D:\\zGmitY4_2021\\Applied Project\\Project-Krantz-Mura\\KrantzMura_Game\\Source\\KrantzMura_GameEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
