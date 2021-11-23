@@ -1050,3 +1050,18 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.11.23-14.07.05:775][381]LogSavePackage: Moving '../../../../../../zGmitY4_2021/Applied Project/Project-Krantz-Mura/KrantzMura_Game/Saved/KrantzMura_Map1C2CA2B84844A6E64846059B3F046D99.tmp' to '../../../../../../zGmitY4_2021/Applied Project/Project-Krantz-Mura/KrantzMura_Game/Content/KrantzMura_Map.umap'
 [2021.11.23-14.07.05:807][381]AssetCheck: New page: Asset Save: KrantzMura_Map
 [2021.11.23-14.07.05:850][381]LogContentValidation: Display: Validating World /Game/KrantzMura_Map.KrantzMura_Map
+[2021.11.23-14.11.15:290][656]LogSlate: Window 'Message' being destroyed
+[2021.11.23-14.11.15:298][656]Message dialog closed, result: Yes, title: Message, text: Are you sure you want to update the default settings?
+[2021.11.23-14.11.17:297][656]LogSlate: Window 'Message' being destroyed
+[2021.11.23-14.11.17:304][656]Message dialog closed, result: Ok, title: Message, text: The default configuration file for these settings was updated successfully. 
+
+If checked into source control this would affect other developers.
+[2021.11.23-14.11.21:536][949]LogSlate: Window 'Editor Preferences' being destroyed
+[2021.11.23-14.11.21:543][949]LogSlate: Window 'Editor Preferences' being destroyed
+[2021.11.23-14.13.13:735][543]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.11.23-14.13.13:735][543]LogWindowsTextInputMethodSystem: Display: IME system deactivated.
+[2021.11.23-14.14.57:877][165]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2021.11.23-14.14.57:900][165]LogTexture: Display: Building textures: Texture2D_0 (BGRA8, 512X512)
+[2021.11.23-14.14.58:032][165]LogSavePackage: Moving '../../../../../../zGmitY4_2021/Applied Project/Project-Krantz-Mura/KrantzMura_Game/Saved/KrantzMura_Map4988769B4CA7A77F029B3D98DCD99EB2.tmp' to '../../../../../../zGmitY4_2021/Applied Project/Project-Krantz-Mura/KrantzMura_Game/Content/KrantzMura_Map.umap'
+[2021.11.23-14.14.58:049][165]AssetCheck: New page: Asset Save: KrantzMura_Map
+[2021.11.23-14.14.58:049][165]LogContentValidation: Display: Validating World /Game/KrantzMura_Map.KrantzMura_Map
