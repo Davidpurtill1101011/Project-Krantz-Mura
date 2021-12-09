@@ -29,11 +29,21 @@ public:
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Camera")// camera Follows the player
 		UCameraComponent* FollowCamera;
 
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Character Movement: Walking")
+		float SprintSpeedMultiplier;
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Character Movement: Walking")
+		float WalkSpeed;
+
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 
 	void StartCrouching();
-	//void StopCrouching();
+
+	void Sprint();
+	void StopSprinting();
+
+	void Walking();
+	void StopWalking();
 
 	bool isDead;
 
