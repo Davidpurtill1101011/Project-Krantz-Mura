@@ -30,6 +30,9 @@ AGillie::AGillie()
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);// attatching the follow camera to the cameraboom
 
 	FollowCamera->bUsePawnControlRotation = false;
+
+	SprintSpeedMultiplier = 1.5f;
+	WalkSpeed = 0.3f;
 }
 
 // Called when the game starts or when spawned
@@ -63,6 +66,11 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAxis("MoveForward", this, &AGillie::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AGillie::MoveRight);
 
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &AGillie::Sprint);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &AGillie::StopSprinting);
+
+	PlayerInputComponent->BindAction("Walking", IE_Pressed, this, &AGillie::Walking);
+	PlayerInputComponent->BindAction("Walking", IE_Released, this, &AGillie::StopWalking);
 }
 
 void AGillie::MoveForward(float Value)
@@ -87,17 +95,11 @@ void AGillie::MoveRight(float Value)
 
 void AGillie::StartCrouching()
 {
-	/*if (!GetCharacterMovement()->IsCrouching()) // checking to see if the player is already in the crouch position
-	{
-		GetCharacterMovement()->bWantsToCrouch = true;
-		UE_LOG(LogTemp, Warning, TEXT("Crouching"));
-		GetCharacterMovement()->Crouch();
-	}*/
-
+	
 	if (GetCharacterMovement()->IsCrouching())
 	{
 		UnCrouch();
-
+		
 	}
 	else
 	{
@@ -107,14 +109,25 @@ void AGillie::StartCrouching()
 	}
 }
 
-/*void AGillie::StopCrouching()
+void AGillie::Sprint()
 {
+	GetCharacterMovement()->MaxWalkSpeed *= SprintSpeedMultiplier;
+	printf("Hello");
+}
 
-	if (GetCharacterMovement()->IsCrouching()) // checking to see if the player is already in the crouch position
-	{
-		GetCharacterMovement()->bWantsToCrouch = false;
-		UE_LOG(LogTemp, Warning, TEXT("UNCrouching"));
-		GetCharacterMovement()->UnCrouch();
-	}
-}*/
+void AGillie::StopSprinting()
+{
+	GetCharacterMovement()->MaxWalkSpeed /= SprintSpeedMultiplier;
+}
+
+void AGillie::Walking()
+{
+	GetCharacterMovement()->MaxWalkSpeed *= WalkSpeed;
+}
+
+void AGillie::StopWalking()
+{
+	GetCharacterMovement()->MaxWalkSpeed /= WalkSpeed;
+}
+
 
