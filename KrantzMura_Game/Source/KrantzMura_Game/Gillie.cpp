@@ -3,6 +3,8 @@
 
 #include "Gillie.h"
 
+
+
 // Sets default values
 AGillie::AGillie()
 {
@@ -61,7 +63,8 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);// on relese we stop the jumping from happening#
 
 	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &AGillie::StartCrouching);// on press the jump happens
-	//PlayerInputComponent->BindAction("Crouch", IE_Released, this, &AGillie::StopCrouching);// on relese we stop the jumping from happening#
+
+	PlayerInputComponent->BindAction("Interact", IE_Released, this, &AGillie::Interact);// lets the character to interact with objects
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AGillie::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AGillie::MoveRight);
@@ -128,6 +131,27 @@ void AGillie::Walking()
 void AGillie::StopWalking()
 {
 	GetCharacterMovement()->MaxWalkSpeed /= WalkSpeed;
+}
+
+void AGillie::Interact()
+{
+	FHitResult Hit;
+	FVector Start = FollowCamera->GetComponentLocation();
+	FVector End = Start + GetControlRotation().Vector() * 800.0f;
+
+	FCollisionQueryParams QueryParams;
+	QueryParams.AddIgnoredActor(this);// the linetrace doesnt pick up the player
+
+	if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, FCollisionObjectQueryParams(), QueryParams)) {
+		if (AActor* Actor = Hit.GetActor()) {
+			UE_LOG(LogTemp, Warning, TEXT("Actor Hit: %s"), *Actor->GetName());
+			// temp ToggleDoor if it is the door that is hit
+			if (ADoor* Door = Cast<ADoor>(Actor)) {
+				Door->ToggleDoor();
+			}
+
+		}
+	}
 }
 
 

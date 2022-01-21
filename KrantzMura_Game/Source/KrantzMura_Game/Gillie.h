@@ -11,7 +11,7 @@
 #include <Camera/CameraComponent.h>
 #include <GameFramework/SpringArmComponent.h>
 #include "Components/CapsuleComponent.h"
-
+#include "Door.h"
 #include "Gillie.generated.h"
 
 UCLASS()
@@ -44,6 +44,8 @@ public:
 
 	void Walking();
 	void StopWalking();
+
+	void Interact();
 
 	bool isDead;
 
