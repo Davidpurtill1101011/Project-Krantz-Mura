@@ -1,2 +1,0 @@
-D:\zGmitY4_2021\Applied Project\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h
-d:\zgmity4_2021\applied project\project-krantz-mura\krantzmura_game\source\krantzmura_game\KrantzMura_Game.h

@@ -1,9 +1,0 @@
-D:\zGmitY4_2021\Applied Project\Project-Krantz-Mura\KrantzMura_Game\Intermediate\Build\Win64\UE4Editor\Development\KrantzMura_Game\Definitions.KrantzMura_Game.h
-D:\Program Files (x86)\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\Program Files (x86)\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\zGmitY4_2021\Applied Project\Project-Krantz-Mura\KrantzMura_Game\Source\KrantzMura_Game/KrantzMura_GameGameModeBase.h
-D:\Program Files (x86)\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-D:\Program Files (x86)\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-D:\Program Files (x86)\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-D:\Program Files (x86)\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-d:\zgmity4_2021\applied project\project-krantz-mura\krantzmura_game\intermediate\build\win64\ue4editor\inc\krantzmura_game\KrantzMura_GameGameModeBase.generated.h
