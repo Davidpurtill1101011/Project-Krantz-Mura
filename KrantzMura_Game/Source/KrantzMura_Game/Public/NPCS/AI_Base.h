@@ -32,7 +32,7 @@ private:
 	UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = "true"))
 	int CurrentWaypoint;
 
-	TArray<AActor*> Waypoints;
+	TArray<AActor*> WaypointsArray;
 
 
 };

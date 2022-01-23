@@ -18,7 +18,7 @@ void AAI_Base::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AWaypoint::StaticClass(), Waypoints);
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AWaypoint::StaticClass(), WaypointsArray);
 	MoveToWaypoints();
 }
 
@@ -44,16 +44,21 @@ void AAI_Base::MoveToWaypoints()
 	AGuardAIController* GuardAIController = Cast<AGuardAIController>(GetController());
 
 	if (GuardAIController) {// checking to see if the cast was good
-		if (CurrentWaypoint <= Waypoints.Num()) {
-			for (AActor* Waypoint_s : Waypoints) 
+		if (CurrentWaypoint <= WaypointsArray.Num()) {
+			for (AActor* Waypoints : WaypointsArray) 
 			{
-				AWaypoint* WaypointItr = Cast<AWaypoint>(Waypoint_s);
+				AWaypoint* WaypointItr = Cast<AWaypoint>(Waypoints);
 				if (WaypointItr) {
 					if (WaypointItr->GetWaypointOrder() == CurrentWaypoint) {
-						GuardAIController->MoveToActor(WaypointItr, 10.0f, false);
+						GuardAIController->MoveToActor(WaypointItr, 0.1f, false);
 						CurrentWaypoint++;
+						if (CurrentWaypoint > WaypointsArray.Num()) {
+							CurrentWaypoint = 1;
+							break;
+						}
 						break;
 					}
+					
 				}
 			}
 		}
