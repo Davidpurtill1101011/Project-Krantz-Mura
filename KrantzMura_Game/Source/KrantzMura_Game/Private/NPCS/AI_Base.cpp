@@ -4,9 +4,12 @@
 #include <NPCS/Waypoint.h>
 #include "NPCS/AI_Base.h"
 <<<<<<< HEAD
+<<<<<<< HEAD
 #include <NPCS/GuardAIController.h>
 #include <NPCS/Waypoint.h>
 
+=======
+>>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
 =======
 >>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
 #include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
