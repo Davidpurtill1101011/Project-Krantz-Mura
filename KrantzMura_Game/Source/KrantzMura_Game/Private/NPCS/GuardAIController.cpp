@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "NPCS/AI_Base.h"
 #include "NPCS/GuardAIController.h"
+#include "NPCS/AI_Base.h"
+
 
 void AGuardAIController::OnMoveCompleted(FAIRequestID ReqID, const FPathFollowingResult& Res)
 {
