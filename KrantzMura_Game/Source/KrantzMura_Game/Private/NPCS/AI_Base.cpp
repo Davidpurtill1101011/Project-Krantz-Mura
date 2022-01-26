@@ -1,30 +1,17 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include <NPCS/GuardAIController.h>
-#include <NPCS/Waypoint.h>
-#include "NPCS/AI_Base.h"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-#include <NPCS/GuardAIController.h>
-#include <NPCS/Waypoint.h>
-
-=======
->>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
-=======
->>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
-=======
->>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
-=======
->>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
-#include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
+#include <Perception/AIPerceptionComponent.h>
+#include <Perception/AISenseConfig_Sight.h>
 
 // Sets default values
 AAI_Base::AAI_Base()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	GetCharacterMovement()->bOrientRotationToMovement = true;// lets the character to turn in the way it is walking
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 600.0f, 0.0f);// turn rate of the AI
 
 }
 

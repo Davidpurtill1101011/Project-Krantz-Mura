@@ -2,30 +2,60 @@
 
 #include "NPCS/AI_Base.h"
 #include "NPCS/GuardAIController.h"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 #include "NPCS/AI_Base.h"
 
+AGuardAIController::AGuardAIController(){
+	PrimaryActorTick.bCanEverTick = true;
 
-=======
+	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("Sight Config"));
+	SetPerceptionComponent(*CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("Perception Component")));
 
->>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
-=======
+	SightConfig->SightRadius = DetectSightRadius;
+	SightConfig->LoseSightRadius = LoseSightradius;
+	SightConfig->PeripheralVisionAngleDegrees = FieldOfView;
+	SightConfig->SetMaxAge(SightAge);
 
->>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
-=======
-
->>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
-=======
-
->>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
-void AGuardAIController::OnMoveCompleted(FAIRequestID ReqID, const FPathFollowingResult& Res)
+	// setting all the AI detections to true(This is the vision/eye-sight of the AI)
+	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+	SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
+	SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+	
+	//Perception object set to know what to do when the game is running.
+	// setting sight to be the most domiant sense the AI will use to spot the player
+	GetPerceptionComponent()->SetDominantSense(*SightConfig->GetSenseImplementation());
+	GetPerceptionComponent()->OnPerceptionUpdated.AddDynamic(this, &AGuardAIController::OnPawnDetected);
+	GetPerceptionComponent()->ConfigureSense(*SightConfig);
+}
+void AGuardAIController::Tick(float DeltaSeconds)
 {
-	AAI_Base* AI_Base = Cast<AAI_Base>(GetPawn());// GetPawn will get a character type and treat it as the class defined
+	Super::Tick(DeltaSeconds);
+}
 
-	if (AI_Base) {
-		AI_Base->MoveToWaypoints();
+void AGuardAIController::BeginPlay()
+{
+	Super::BeginPlay();
+	UE_LOG(LogTemp, Warning, TEXT("All Systems Set"));
+}
+
+void AGuardAIController::OnPossess(APawn* MyPawn)
+{
+	Super::OnPossess(MyPawn);
+}
+
+
+
+FRotator AGuardAIController::GetControlRotation() const
+{
+	if (GetPawn() == nullptr) {
+		return FRotator(0.0f, 0.0f, 0.0f);
 	}
+
+	return FRotator(0.0f, GetPawn()->GetActorRotation().Yaw, 0.0f);
+	
+}
+
+void AGuardAIController::OnPawnDetected(const TArray<AActor*> &DetectedPawns)
+{
+
 }
