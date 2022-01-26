@@ -13,33 +13,7 @@ UCLASS()
 class KRANTZMURA_GAME_API AGuardAIController : public AAIController
 {
 	GENERATED_BODY()
-AGuardAIController();
 
-	virtual void BeginPlay() override;
-
-	virtual void OnPossess(APawn* MyPawn) override;
-
-	//virtual void OnUnPossess();
-
-	virtual void Tick(float DeltaSeconds) override;
-
-	virtual FRotator GetControlRotation() const override;
-
-	UFUNCTION()
-		void OnPawnDetected(const TArray<AActor*> &DetectedPawns);// this function lets the AI pickup on objects that have entered their vicinity
-	
-	UPROPERTY(VisibleAnywhere, Category = AI)
-		float DetectSightRadius = 500.0f;// detection area
-
-	UPROPERTY(VisibleAnywhere, Category = AI)
-		float SightAge = 5.0f;// how long the AI keeps the object that is found in memory
-
-	UPROPERTY(VisibleAnywhere, Category = AI)
-		float LoseSightradius = DetectSightRadius + 25.0f;// the distance the Player needs to be away for the AI to lose sight of them
-
-	UPROPERTY(VisibleAnywhere, Category = AI)
-		float FieldOfView = 90.0f;// vision cone for the AI to spot the Player.
-
-	UPROPERTY(VisibleAnywhere, Category = AI)
-		class UAISenseConfig_Sight* SightConfig;
+	// this function lets the ai do the loop of the patrol again
+	virtual void OnMoveCompleted(FAIRequestID ReqID, const FPathFollowingResult& Res) override;
 };

@@ -1,16 +1,15 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include <NPCS/AI_Base.h>
-#include <GameFramework/CharacterMovementComponent.h>
+#include <NPCS/GuardAIController.h>
+#include <NPCS/Waypoint.h>
+#include "NPCS/AI_Base.h"
+#include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
 
 // Sets default values
 AAI_Base::AAI_Base()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
-	GetCharacterMovement()->bOrientRotationToMovement = true;// lets the character to turn in the way it is walking
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 600.0f, 0.0f);// turn rate of the AI
 
 }
 
