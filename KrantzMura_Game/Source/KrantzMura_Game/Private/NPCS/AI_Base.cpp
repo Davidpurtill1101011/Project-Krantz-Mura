@@ -1,9 +1,14 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
+#include <NPCS/GuardAIController.h>
+#include <NPCS/Waypoint.h>
 #include "NPCS/AI_Base.h"
+<<<<<<< HEAD
 #include <NPCS/GuardAIController.h>
 #include <NPCS/Waypoint.h>
 
+=======
+>>>>>>> parent of 6a70b29 (Added some code for the Ai to do its own thing #10)
 #include <Runtime/Engine/Classes/Kismet/GameplayStatics.h>
 
 // Sets default values
