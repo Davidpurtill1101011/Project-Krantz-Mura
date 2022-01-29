@@ -2,13 +2,15 @@
 
 
 #include "AI_GuardPatrol_Character.h"
-
+#include <GameFramework/CharacterMovementComponent.h>
 // Sets default values
 AAI_GuardPatrol_Character::AAI_GuardPatrol_Character()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	GetCharacterMovement()->bOrientRotationToMovement = true;// these two methods work together to move/turn the ai in the direction it is moving
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 600.0f, 0.0f);// the speed it turns at
 }
 
 // Called when the game starts or when spawned
