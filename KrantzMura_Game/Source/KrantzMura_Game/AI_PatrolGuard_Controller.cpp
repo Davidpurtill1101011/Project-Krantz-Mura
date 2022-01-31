@@ -2,8 +2,11 @@
 
 
 #include "AI_PatrolGuard_Controller.h"
+#include "AI_GuardPatrol_Character.h"
+#include "Waypoint.h"
 #include <Perception/AIPerceptionComponent.h>
 #include <Perception/AISenseConfig_Sight.h>
+
 
 AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
 {
@@ -47,6 +50,11 @@ void AAI_PatrolGuard_Controller::OnPossess(APawn* MyPawn)
 void AAI_PatrolGuard_Controller::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
+
+	AAI_GuardPatrol_Character* MyCharacter = Cast<AAI_GuardPatrol_Character>(GetPawn());
+	if (MyCharacter->Waypoint != nullptr) {
+		MoveToActor(MyCharacter->Waypoint, 5.0f);
+	}
 }
 
 FRotator AAI_PatrolGuard_Controller::GetControlRotation() const

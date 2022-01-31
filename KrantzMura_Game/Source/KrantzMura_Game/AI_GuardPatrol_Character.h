@@ -15,6 +15,9 @@ public:
 	// Sets default values for this character's properties
 	AAI_GuardPatrol_Character();
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		class AWaypoint* Waypoint; // this starts out as null and needs to be set manually in Unreal Editor 
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -25,5 +28,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
 
 };
