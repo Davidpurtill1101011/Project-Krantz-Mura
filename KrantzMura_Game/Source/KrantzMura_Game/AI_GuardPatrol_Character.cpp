@@ -9,6 +9,10 @@ AAI_GuardPatrol_Character::AAI_GuardPatrol_Character()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	bUseControllerRotationPitch = false;
+	bUseControllerRotationRoll = false;
+	bUseControllerRotationYaw = false;
+
 	GetCharacterMovement()->bOrientRotationToMovement = true;// these two methods work together to move/turn the ai in the direction it is moving
 	GetCharacterMovement()->RotationRate = FRotator(0.0f, 600.0f, 0.0f);// the speed it turns at
 }
