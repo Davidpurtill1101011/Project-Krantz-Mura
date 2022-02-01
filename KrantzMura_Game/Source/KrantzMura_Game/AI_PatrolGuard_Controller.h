@@ -38,8 +38,15 @@ public:
 		float AILossOfSight = AIVisionRadius + 100.0f; //this is the radius for when the AI looses sight of the player
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
-		float FOV = 90.0f; // FOV sets both eyes to be 90 degree angles and then they both work like periferal vision
+		float FOV = 90.0f; // FOV sets both eyes to be 90 degree angles and then they both work like periferal vision (180 degrees of vision)
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
 		class UAISenseConfig_Sight* SightConfig;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
+		bool isPlayerDetected;// checks to see if the the player is in the detectionzone
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
+		float PlayerDistance;// checking to see how far away the player is
+
 };
