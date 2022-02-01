@@ -4,6 +4,8 @@
 #include "AI_PatrolGuard_Controller.h"
 #include "AI_GuardPatrol_Character.h"
 #include "Waypoint.h"
+#include "Gillie.h"
+#include <Kismet/GameplayStatics.h>
 #include <Perception/AIPerceptionComponent.h>
 #include <Perception/AISenseConfig_Sight.h>
 
@@ -27,6 +29,9 @@ AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
 	GetPerceptionComponent()->SetDominantSense(*SightConfig->GetSenseImplementation()); //setting sight to be the most dominant sense for the ai to find the player
 	GetPerceptionComponent()->OnPerceptionUpdated.AddDynamic(this, &AAI_PatrolGuard_Controller::OnPawnDetected);
 	GetPerceptionComponent()->ConfigureSense(*SightConfig);
+
+	isPlayerDetected = false;
+	PlayerDistance = 0.0f;
 }
 
 void AAI_PatrolGuard_Controller::BeginPlay()
@@ -52,8 +57,18 @@ void AAI_PatrolGuard_Controller::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 
 	AAI_GuardPatrol_Character* MyCharacter = Cast<AAI_GuardPatrol_Character>(GetPawn());
-	if (MyCharacter->Waypoint != nullptr) {
+
+	if (PlayerDistance > AIVisionRadius) {
+		isPlayerDetected = false;
+
+	}
+
+	if (MyCharacter->Waypoint != nullptr && isPlayerDetected == false) {
 		MoveToActor(MyCharacter->Waypoint, 5.0f);
+	}
+	else if (isPlayerDetected == true) {
+		AGillie* Player = Cast<AGillie>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+		MoveToActor(Player, 5.0f);
 	}
 }
 
@@ -69,4 +84,11 @@ FRotator AAI_PatrolGuard_Controller::GetControlRotation() const
 
 void AAI_PatrolGuard_Controller::OnPawnDetected(const TArray<AActor*>& DetectedPawns)
 {
+	for (size_t i = 0; i < DetectedPawns.Num(); i++)
+	{
+		PlayerDistance = GetPawn()->GetDistanceTo(DetectedPawns[i]);
+		UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), PlayerDistance);
+	}
+
+	isPlayerDetected = true;
 }
