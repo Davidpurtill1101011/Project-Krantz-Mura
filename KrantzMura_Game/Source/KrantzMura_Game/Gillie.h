@@ -31,8 +31,12 @@ public:
 
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Character Movement: Walking")
 		float SprintSpeedMultiplier;
+
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Character Movement: Walking")
 		float WalkSpeed;
+
+	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Animation")
+		class UAnimMontage* FightingMontage; // this lets bid to the blueprint via C++ code
 
 	void MoveForward(float Value);
 	void MoveRight(float Value);
@@ -46,6 +50,10 @@ public:
 	void StopWalking();
 
 	void Interact();
+
+	// functions for fighting
+	void StartAttack();
+	void StopAttack();
 
 	bool isDead;
 
