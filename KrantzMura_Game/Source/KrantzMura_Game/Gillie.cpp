@@ -35,6 +35,13 @@ AGillie::AGillie()
 
 	SprintSpeedMultiplier = 1.5f;
 	WalkSpeed = 0.3f;
+
+	// loading the montage
+	static ConstructorHelpers::FObjectFinder<UAnimMontage>FightingMontageObj(TEXT("AnimMontage'/Game/Mannequin/Animations/Fighting/FIghting.FIghting'"));
+
+	if (FightingMontageObj.Succeeded()) {// if this succecds we then can use the animation that has been made over in UE(Unreal Engine Editor)
+		FightingMontage = FightingMontageObj.Object;
+	}
 }
 
 // Called when the game starts or when spawned
@@ -74,6 +81,10 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAction("Walking", IE_Pressed, this, &AGillie::Walking);
 	PlayerInputComponent->BindAction("Walking", IE_Released, this, &AGillie::StopWalking);
+
+	// binding the action buttons
+	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &AGillie::StartAttack);
+	PlayerInputComponent->BindAction("Attack", IE_Released, this, &AGillie::StopAttack);
 }
 
 void AGillie::MoveForward(float Value)
@@ -154,4 +165,15 @@ void AGillie::Interact()
 	}
 }
 
+void AGillie::StartAttack()
+{
+	// adding a random function to concat onto Start so when M1 is clicked it will pick 1 or 2 and throw a different style punch
+	int PunchIndex = rand() % 2 + 1;
+	FString MontageSection = "Start_" + FString::FromInt(PunchIndex);
+	PlayAnimMontage(FightingMontage, 1.f, FName(*MontageSection)); // plays the animations, how fast the animations run 
+}
+
+void AGillie::StopAttack()
+{
+}
 
