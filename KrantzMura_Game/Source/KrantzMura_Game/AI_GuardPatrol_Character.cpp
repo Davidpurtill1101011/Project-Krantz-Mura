@@ -14,7 +14,8 @@ AAI_GuardPatrol_Character::AAI_GuardPatrol_Character()
 	bUseControllerRotationYaw = false;
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;// these two methods work together to move/turn the ai in the direction it is moving
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 600.0f, 0.0f);// the speed it turns at
+	GetCharacterMovement()->RotationRate = FRotator(0.0f, 200.0f, 0.0f);// the speed it turns at
+	
 }
 
 // Called when the game starts or when spawned

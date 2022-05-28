@@ -25,6 +25,7 @@ AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
 	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
 	SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
 	SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+	
 
 	GetPerceptionComponent()->SetDominantSense(*SightConfig->GetSenseImplementation()); //setting sight to be the most dominant sense for the ai to find the player
 	GetPerceptionComponent()->OnPerceptionUpdated.AddDynamic(this, &AAI_PatrolGuard_Controller::OnPawnDetected);
@@ -32,6 +33,8 @@ AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
 
 	isPlayerDetected = false;
 	PlayerDistance = 0.0f;
+	AI = 0;
+	Player = 0;
 }
 
 void AAI_PatrolGuard_Controller::BeginPlay()
@@ -58,9 +61,7 @@ void AAI_PatrolGuard_Controller::Tick(float DeltaSeconds)
 
 	AAI_GuardPatrol_Character* MyCharacter = Cast<AAI_GuardPatrol_Character>(GetPawn());
 
-	if (PlayerDistance > AIVisionRadius) {
-		isPlayerDetected = false;
-
+	if (PlayerDistance > AIVisionRadius ) {
 	}
 
 	if (MyCharacter->Waypoint != nullptr && isPlayerDetected == false) {
@@ -69,6 +70,7 @@ void AAI_PatrolGuard_Controller::Tick(float DeltaSeconds)
 	else if (isPlayerDetected == true) {
 		AGillie* Player = Cast<AGillie>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 		MoveToActor(Player, 5.0f);
+
 	}
 }
 
