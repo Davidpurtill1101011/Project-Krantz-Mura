@@ -29,7 +29,7 @@ public:
 		void OnPawnDetected(const TArray<AActor*>& DetectedPawns);
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
-		float AIVisionRadius = 600.0f; // Area where the AI can detect the player when seen
+		float AIVisionRadius = 1000.0f; // Area where the AI can detect the player when seen
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
 		float AISightAge = 5.0f; // how long the ai keeps looking for the player after the player has left the radius
@@ -48,5 +48,11 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
 		float PlayerDistance;// checking to see how far away the player is
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
+		int AI;// checking to see how far away the player is
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
+		int Player;// checking to see how far away the player is
 
 };

@@ -126,7 +126,7 @@ void AGillie::StartCrouching()
 void AGillie::Sprint()
 {
 	GetCharacterMovement()->MaxWalkSpeed *= SprintSpeedMultiplier;
-	printf("Hello");
+	
 }
 
 void AGillie::StopSprinting()
