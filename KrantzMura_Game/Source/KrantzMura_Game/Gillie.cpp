@@ -2,7 +2,8 @@
 
 
 #include "Gillie.h"
-
+#include <Item.generated.h>
+#include <KrantzMura_Game/Public/InteractableInterface.h>
 
 
 // Sets default values
@@ -71,7 +72,8 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAction("Crouch", IE_Pressed, this, &AGillie::StartCrouching);// on press the jump happens
 
-	PlayerInputComponent->BindAction("Interact", IE_Released, this, &AGillie::Interact);// lets the character to interact with objects
+	//PlayerInputComponent->BindAction("Interact", IE_Released, this, &AGillie::DoorInteract);// lets the character to interact with objects
+	PlayerInputComponent->BindAction("Interact", IE_Released, this, &AGillie::ItemInteract);// lets the character to interact with objects
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AGillie::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AGillie::MoveRight);
@@ -86,6 +88,8 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &AGillie::StartAttack);
 	PlayerInputComponent->BindAction("Attack", IE_Released, this, &AGillie::StopAttack);
 }
+
+
 
 void AGillie::MoveForward(float Value)
 {
@@ -144,14 +148,16 @@ void AGillie::StopWalking()
 	GetCharacterMovement()->MaxWalkSpeed /= WalkSpeed;
 }
 
-void AGillie::Interact()
+void AGillie::DoorInteract()
 {
 	FHitResult Hit;
 	FVector Start = FollowCamera->GetComponentLocation();
 	FVector End = Start + GetControlRotation().Vector() * 800.0f;
 
 	FCollisionQueryParams QueryParams;
-	QueryParams.AddIgnoredActor(this);// the linetrace doesnt pick up the player
+	// the linetrace doesnt pick up the player ie: Line goes from camera 
+	// through the player and then you can interact with the object
+	QueryParams.AddIgnoredActor(this);
 
 	if (GetWorld()->LineTraceSingleByObjectType(Hit, Start, End, FCollisionObjectQueryParams(), QueryParams)) {
 		if (AActor* Actor = Hit.GetActor()) {
@@ -160,6 +166,28 @@ void AGillie::Interact()
 			if (ADoor* Door = Cast<ADoor>(Actor)) {
 				Door->ToggleDoor();
 			}
+
+		}
+	}
+}
+
+void AGillie::ItemInteract()
+{
+	
+	FVector Start = FollowCamera->GetComponentLocation();
+	FVector End = Start + GetControlRotation().Vector() * 500.0f;
+
+	FHitResult Hit;
+
+	FCollisionQueryParams Params;
+	// the linetrace doesnt pick up the player ie: Line goes from camera 
+	// through the player and then you can interact with the object
+	Params.AddIgnoredActor(this);
+	//LineTraceSingleByChannel will let the item you want to pick up(DESTORY) the object
+	// this works differently to how the door works as to where the door stays put.
+	if (GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, Params)) {
+		if (IInteractableInterface* Interface = Cast<IInteractableInterface>(Hit.GetActor())) {
+			Interface->Interact(this);
 
 		}
 	}

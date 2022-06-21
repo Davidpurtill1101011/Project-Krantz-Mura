@@ -12,7 +12,10 @@
 #include <GameFramework/SpringArmComponent.h>
 #include "Components/CapsuleComponent.h"
 #include "Door.h"
+#include <KrantzMura_Game/Structs.h>
 #include "Gillie.generated.h"
+
+
 
 UCLASS()
 class KRANTZMURA_GAME_API AGillie : public ACharacter
@@ -38,6 +41,9 @@ public:
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Animation")
 		class UAnimMontage* FightingMontage; // this lets bid to the blueprint via C++ code
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
+		void AddItemToInventoryWidget(FItem_Information ItemData);
+
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 
@@ -49,11 +55,15 @@ public:
 	void Walking();
 	void StopWalking();
 
-	void Interact();
+	void DoorInteract();
+	void ItemInteract();
 
 	// functions for fighting
 	void StartAttack();
 	void StopAttack();
+
+	// for the inventory system
+	
 
 	bool isDead;
 
