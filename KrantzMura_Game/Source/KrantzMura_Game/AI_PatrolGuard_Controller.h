@@ -49,10 +49,6 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
 		float PlayerDistance;// checking to see how far away the player is
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
-		int AI;// checking to see how far away the player is
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
-		int Player;// checking to see how far away the player is
+	
 
 };

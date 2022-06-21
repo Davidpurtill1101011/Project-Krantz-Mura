@@ -33,8 +33,6 @@ AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
 
 	isPlayerDetected = false;
 	PlayerDistance = 0.0f;
-	AI = 0;
-	Player = 0;
 }
 
 void AAI_PatrolGuard_Controller::BeginPlay()
@@ -60,9 +58,6 @@ void AAI_PatrolGuard_Controller::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 
 	AAI_GuardPatrol_Character* MyCharacter = Cast<AAI_GuardPatrol_Character>(GetPawn());
-
-	if (PlayerDistance > AIVisionRadius ) {
-	}
 
 	if (MyCharacter->Waypoint != nullptr && isPlayerDetected == false) {
 		MoveToActor(MyCharacter->Waypoint, 5.0f);
