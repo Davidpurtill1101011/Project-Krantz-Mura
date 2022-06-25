@@ -6,18 +6,22 @@
 #include "UObject/Interface.h"
 #include "InteractableInterface.generated.h"
 
+
+
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
 class UInteractableInterface : public UInterface
 {
 	GENERATED_BODY()
 };
-
+class AGillie;
 class KRANTZMURA_GAME_API IInteractableInterface
 {
 	GENERATED_BODY()
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
-	virtual void Interact(class AGillie* Character) = 0;
+	virtual void Interact(AGillie* Character) = 0;
+
+	virtual void Use(AGillie* Character) {}
 };
