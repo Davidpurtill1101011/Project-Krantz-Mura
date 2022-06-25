@@ -16,6 +16,7 @@
 #include "Gillie.generated.h"
 
 
+class AItem;
 
 UCLASS()
 class KRANTZMURA_GAME_API AGillie : public ACharacter
@@ -41,8 +42,23 @@ public:
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Animation")
 		class UAnimMontage* FightingMontage; // this lets bid to the blueprint via C++ code
 
+	UPROPERTY(BlueprintReadWrite, Category= "Health")
+		float Health;
+
+	UPROPERTY(BlueprintReadWrite, Category = "Health")
+		float Hunger;
+
+	//FUNCTIONS
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
 		void AddItemToInventoryWidget(FItem_Information ItemData);
+
+	UFUNCTION(BlueprintCallable, Category = "Inventory System")
+		void UseItem(TSubclassOf<AItem> ItemSub);
+	
+
+
+	void AddHealth(float Value);
+	void RemoveHunger(float Value);
 
 	void MoveForward(float Value);
 	void MoveRight(float Value);
@@ -66,9 +82,6 @@ public:
 	
 
 	bool isDead;
-
-
-
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

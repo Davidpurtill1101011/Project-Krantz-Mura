@@ -2,7 +2,7 @@
 
 
 #include "Gillie.h"
-#include <Item.generated.h>
+#include "Item.h"
 #include <KrantzMura_Game/Public/InteractableInterface.h>
 
 
@@ -90,6 +90,27 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 }
 
 
+
+void AGillie::UseItem(TSubclassOf<AItem> ItemSub)
+{
+	if (ItemSub) {
+		if (AItem* Item = ItemSub.GetDefaultObject()) {
+			Item->Use(this);
+		}
+	}
+}
+
+void AGillie::AddHealth(float Value)
+{
+	Health += Value;
+	UE_LOG(LogTemp, Warning, TEXT("ADDED HEALTH: %f"), Health);
+}
+
+void AGillie::RemoveHunger(float Value)
+{
+	Hunger -= Value;
+	UE_LOG(LogTemp, Warning, TEXT("Not Hungery: %f"), Hunger);
+}
 
 void AGillie::MoveForward(float Value)
 {

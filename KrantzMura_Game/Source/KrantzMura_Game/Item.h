@@ -29,5 +29,8 @@ protected:
 
 public:
 	virtual void Interact(class AGillie* Character) override;
+
 	FItem_Information GetItemData() const { return ItemData; }
+
+	virtual void Use(AGillie* Character) override;
 };

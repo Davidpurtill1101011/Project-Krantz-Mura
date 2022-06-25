@@ -13,6 +13,8 @@ AItem::AItem()
 
 	ItemMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComponent"));
 	RootComponent = ItemMesh;
+
+	ItemData.ItemClass = StaticClass();
 }
 
 // Called when the game starts or when spawned
@@ -28,6 +30,11 @@ void AItem::Interact(class AGillie* Character)
 		Character->AddItemToInventoryWidget(ItemData);
 	}
 	Destroy();
+}
+
+void AItem::Use(AGillie* Character)
+{
+	UE_LOG(LogTemp, Warning, TEXT("USING ITEM: %s"), *GetName());
 }
 
 
