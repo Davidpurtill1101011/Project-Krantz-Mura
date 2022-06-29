@@ -39,7 +39,7 @@ public:
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Character Movement: Walking")
 		float WalkSpeed;
 
-	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Animation")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation")
 		class UAnimMontage* FightingMontage; // this lets bid to the blueprint via C++ code
 
 	UPROPERTY(BlueprintReadWrite, Category= "Health")
