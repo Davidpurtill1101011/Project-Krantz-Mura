@@ -89,6 +89,42 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Attack", IE_Released, this, &AGillie::StopAttack);
 }
 
+void AGillie::InventoryItem()
+{
+	if (InventoryItems.Num())
+	{
+		AddItemToInventoryWidget(InventoryItems[InventoryItems.Num() - 1]);
+	}
+}
+
+void AGillie::AddInventoryItem(FItem_Information ItemData)
+{
+	
+	bool bIsNewItem = true;
+	for (FItem_Information Item : InventoryItems) 
+	{
+		if (Item.ItemClass == ItemData.ItemClass) 
+		{
+			++Item.StackCount;
+			bIsNewItem = false;
+			break;
+		}
+	}
+
+	if (bIsNewItem) 
+	{
+		InventoryItems.Add(ItemData);
+		AddItemToInventoryWidget(ItemData);
+	}
+	else
+	{
+		UpdateInventoryWidget(InventoryItems);
+	}
+
+	InventoryItems.Add(ItemData);
+	AddItemToInventoryWidget(ItemData);
+}
+
 
 
 void AGillie::UseItem(TSubclassOf<AItem> ItemSub)
@@ -100,15 +136,24 @@ void AGillie::UseItem(TSubclassOf<AItem> ItemSub)
 	}
 }
 
+void AGillie::UpdateStats(float NewHunger, float NewHealth)
+{
+
+}
+
+
+
 void AGillie::AddHealth(float Value)
 {
 	Health += Value;
+	UpdateStats(Hunger, Health);
 	UE_LOG(LogTemp, Warning, TEXT("ADDED HEALTH: %f"), Health);
 }
 
 void AGillie::RemoveHunger(float Value)
 {
 	Hunger -= Value;
+	UpdateStats(Hunger, Health);
 	UE_LOG(LogTemp, Warning, TEXT("Not Hungery: %f"), Hunger);
 }
 

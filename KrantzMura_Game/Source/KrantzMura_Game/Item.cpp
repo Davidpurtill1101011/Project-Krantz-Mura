@@ -26,10 +26,13 @@ void AItem::BeginPlay()
 
 void AItem::Interact(class AGillie* Character)
 {
-	if (Character) {
-		Character->AddItemToInventoryWidget(ItemData);
+	if (Character) { // this checks to the see if the player is valid
+		// then if the player is valid then add it to the player inventory
+		Character->AddInventoryItem(ItemData);
+		// and when added to the inventory remove it from the world
+		Destroy();
 	}
-	Destroy();
+	
 }
 
 void AItem::Use(AGillie* Character)

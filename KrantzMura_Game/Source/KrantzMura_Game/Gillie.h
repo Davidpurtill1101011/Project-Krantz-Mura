@@ -49,13 +49,24 @@ public:
 		float Hunger;
 
 	//FUNCTIONS
+	// need to make a function NATIVE to see if that will fixed the update text bug
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
 		void AddItemToInventoryWidget(FItem_Information ItemData);
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
+		void UpdateInventoryWidget(const TArray<FItem_Information>& NewInventoryItems);
+
 	UFUNCTION(BlueprintCallable, Category = "Inventory System")
 		void UseItem(TSubclassOf<AItem> ItemSub);
-	
 
+	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
+		void UpdateStats(float NewHunger, float NewHealth);
+
+	UPROPERTY(BlueprintReadWrite, Category = "Inventory System")
+		TArray<FItem_Information> InventoryItems;
+
+	UFUNCTION()
+		void InventoryItem();
 
 	void AddHealth(float Value);
 	void RemoveHunger(float Value);
@@ -92,5 +103,5 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
+	void AddInventoryItem(FItem_Information ItemData);
 };
