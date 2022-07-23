@@ -100,23 +100,23 @@ void AGillie::UseItem(TSubclassOf<AItem> ItemSub)
 	}
 }
 
-void AGillie::UpdateStats(float NewHunger, float NewHealth)
+
+
+void AGillie::UpdatePlayerStats(float NewHunger, float NewHealth)
 {
 }
-
-
 
 void AGillie::AddHealth(float Value)
 {
 	Health += Value;
-	UpdateStats(Hunger, Health);
+	UpdatePlayerStats(Hunger, Health);
 	UE_LOG(LogTemp, Warning, TEXT("ADDED HEALTH: %f"), Health);
 }
 
 void AGillie::RemoveHunger(float Value)
 {
 	Hunger -= Value;
-	UpdateStats(Hunger, Health);
+	UpdatePlayerStats(Hunger, Health);
 	UE_LOG(LogTemp, Warning, TEXT("Not Hungery: %f"), Hunger);
 }
 
