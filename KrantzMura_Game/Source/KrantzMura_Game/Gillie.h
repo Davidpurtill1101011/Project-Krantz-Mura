@@ -55,8 +55,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Inventory System")
 		void UseItem(TSubclassOf<AItem> ItemSub);
 
+	/*UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
+		void UpdateStats(float NewHunger, float NewHealth);*/
+
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
-		void UpdateStats(float NewHunger, float NewHealth);
+		void UpdatePlayerStats(float NewHunger, float NewHealth);
 
 	void AddHealth(float Value);
 	void RemoveHunger(float Value);
