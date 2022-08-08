@@ -37,6 +37,8 @@ AGillie::AGillie()
 	SprintSpeedMultiplier = 1.5f;
 	WalkSpeed = 0.3f;
 
+	TeamId = FGenericTeamId(0);
+
 	// loading the montage
 	static ConstructorHelpers::FObjectFinder<UAnimMontage>FightingMontageObj(TEXT("AnimMontage'/Game/Mannequin/Animations/Fighting/FIghting.FIghting'"));
 

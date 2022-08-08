@@ -10,7 +10,7 @@
 #include <Perception/AISenseConfig_Sight.h>
 
 
-AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
+AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller(const FObjectInitializer& ObjectInitializer) // constructor
 {
 	PrimaryActorTick.bCanEverTick = true;
 
@@ -22,7 +22,7 @@ AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
 	SightConfig->PeripheralVisionAngleDegrees = FOV;
 	SightConfig->SetMaxAge(AISightAge);
 
-	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+	SightConfig->DetectionByAffiliation.bDetectEnemies = false;
 	SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
 	SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
 	
@@ -31,6 +31,8 @@ AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
 	GetPerceptionComponent()->OnPerceptionUpdated.AddDynamic(this, &AAI_PatrolGuard_Controller::OnPawnDetected);
 	GetPerceptionComponent()->ConfigureSense(*SightConfig);
 
+	
+
 	isPlayerDetected = false;
 	PlayerDistance = 0.0f;
 }
@@ -38,13 +40,10 @@ AAI_PatrolGuard_Controller::AAI_PatrolGuard_Controller() // constructor
 void AAI_PatrolGuard_Controller::BeginPlay()
 {
 	Super::BeginPlay();
-	if (GetPerceptionComponent() != nullptr)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("All Systems Set"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Some Problem Occured"));
+	AAI_GuardPatrol_Character* Chr = Cast<AAI_GuardPatrol_Character>(GetPawn());
+	if (Chr) {
+		Guard = Chr;
+		TeamId = FGenericTeamId(Guard->ID);
 	}
 }
 
@@ -65,7 +64,6 @@ void AAI_PatrolGuard_Controller::Tick(float DeltaSeconds)
 	else if (isPlayerDetected == true) {
 		AGillie* Player = Cast<AGillie>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 		MoveToActor(Player, 5.0f);
-
 	}
 }
 
@@ -88,4 +86,41 @@ void AAI_PatrolGuard_Controller::OnPawnDetected(const TArray<AActor*>& DetectedP
 	}
 
 	isPlayerDetected = true;
+}
+
+ETeamAttitude::Type AAI_PatrolGuard_Controller::GetTeamAttitudeTowards(const AActor& Other) const
+{
+	const APawn* OtherPawn = Cast<APawn>(&Other);
+	if (OtherPawn == nullptr) {
+		return ETeamAttitude::Neutral;
+	}
+
+	auto PlayerTI = Cast<IGenericTeamAgentInterface>(&Other);
+	class IGenericTeamAgentInterface* BotTI = Cast<IGenericTeamAgentInterface>(OtherPawn->GetController());
+	if (BotTI == nullptr && PlayerTI == nullptr) {
+		return ETeamAttitude::Neutral;
+	}
+
+	//getting Actors Id
+	FGenericTeamId OtherActorTeamId = NULL;
+	if (BotTI != nullptr) {
+		OtherActorTeamId = BotTI->GetGenericTeamId();
+	}
+	else if (PlayerTI != nullptr) {
+		OtherActorTeamId = PlayerTI->GetGenericTeamId();
+	}
+
+	//if hostile or not
+	FGenericTeamId HostileID = GetGenericTeamId();
+	if (OtherActorTeamId == 8) {
+		return ETeamAttitude::Neutral;
+	}
+	else if (OtherActorTeamId == HostileID) {
+		return ETeamAttitude::Friendly;
+	}
+	else {
+		return ETeamAttitude::Hostile;
+	}
+
+	//return ETeamAttitude::Type();
 }
