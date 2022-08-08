@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include <Perception/AIPerceptionComponent.h>
 #include "AI_PatrolGuard_Controller.generated.h"
 
 /**
@@ -15,7 +16,7 @@ class KRANTZMURA_GAME_API AAI_PatrolGuard_Controller : public AAIController
 	GENERATED_BODY()
 
 public: 
-	AAI_PatrolGuard_Controller();
+	AAI_PatrolGuard_Controller(const FObjectInitializer& ObjectInitializer);
 
 	virtual void BeginPlay() override;
 
@@ -49,6 +50,16 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "AI")
 		float PlayerDistance;// checking to see how far away the player is
 
+	UPROPERTY(BlueprintReadWrite)
+		class AAI_GuardPatrol_Character* Guard;
+
+	virtual FGenericTeamId GetGenericTeamId() const override { return TeamId; }
 	
+protected:
+	UPROPERTY(VisibleAnywhere)
+		UAIPerceptionComponent* AIPerceptionComponent;
+
+	FGenericTeamId TeamId;
+	virtual ETeamAttitude::Type GetTeamAttitudeTowards(const AActor& Other) const override;
 
 };
