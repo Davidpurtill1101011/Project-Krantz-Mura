@@ -12,6 +12,7 @@
 #include <GameFramework/SpringArmComponent.h>
 #include "Components/CapsuleComponent.h"
 #include "Door.h"
+#include <GenericTeamAgentInterface.h>
 #include <KrantzMura_Game/Structs.h>
 #include "Gillie.generated.h"
 
@@ -19,7 +20,7 @@
 class AItem;
 
 UCLASS()
-class KRANTZMURA_GAME_API AGillie : public ACharacter
+class KRANTZMURA_GAME_API AGillie : public ACharacter, public IGenericTeamAgentInterface
 {
 	GENERATED_BODY()
 
@@ -89,12 +90,15 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-
+private:
+	FGenericTeamId TeamId;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual FGenericTeamId GetGenericTeamId() const override { return TeamId; }
 
 };
