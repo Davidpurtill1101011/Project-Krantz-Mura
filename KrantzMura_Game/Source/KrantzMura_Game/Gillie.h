@@ -53,14 +53,20 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
 		void AddItemToInventoryWidget(FItem_Information ItemData);
 
-	UFUNCTION(BlueprintCallable, Category = "Inventory System")
-		void UseItem(TSubclassOf<AItem> ItemSub);
+	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
+		void UpdateInventoryWidget(const TArray<FItem_Information>& NewInventoryItems);
 
-	/*UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
-		void UpdateStats(float NewHunger, float NewHealth);*/
+	UFUNCTION(BlueprintCallable, Category = "Inventory System")
+		void ItemUse(TSubclassOf<AItem> ItemSubClass);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
 		void UpdatePlayerStats(float NewHunger, float NewHealth);
+
+	UPROPERTY(BlueprintReadWrite, Category = "Inventory System")
+		TArray<FItem_Information> InventoryItems;
+
+	UFUNCTION()
+		void Inventory_Items();
 
 	void AddHealth(float Value);
 	void RemoveHunger(float Value);
@@ -84,9 +90,8 @@ public:
 	void StopAttack();
 
 	// for the inventory system
-	
+	void AddInventoryItem(FItem_Information Item_Info);
 
-	bool isDead;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

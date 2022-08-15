@@ -13,6 +13,7 @@ AFood::AFood()
 void AFood::Use(AGillie* Character)
 {
 	if (Character) {
+		UE_LOG(LogTemp, Warning, TEXT("FOOD"));
 		Character->RemoveHunger(HungerPoints);
 	}
 
