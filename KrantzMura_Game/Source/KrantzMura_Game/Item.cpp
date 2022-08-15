@@ -27,7 +27,7 @@ void AItem::BeginPlay()
 void AItem::Interact(class AGillie* Character)
 {
 	if (Character) {
-		Character->AddItemToInventoryWidget(ItemData);
+		Character->AddInventoryItem(ItemData);
 	}
 	Destroy();
 }

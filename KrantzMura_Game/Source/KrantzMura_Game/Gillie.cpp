@@ -91,21 +91,47 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Attack", IE_Released, this, &AGillie::StopAttack);
 }
 
-
-
-void AGillie::UseItem(TSubclassOf<AItem> ItemSub)
+void AGillie::ItemUse(TSubclassOf<AItem> ItemSubClass)
 {
-	if (ItemSub) {
-		if (AItem* Item = ItemSub.GetDefaultObject()) {
-			Item->Use(this);
+	
+	if (ItemSubClass) {
+		
+		if (AItem* OnUseItem = ItemSubClass.GetDefaultObject()) {
+			
+			OnUseItem->Use(this);
 		}
+		uint8 Index = 0;
+		for (FItem_Information& Item : InventoryItems) {
+
+			if (Item.ItemClass == ItemSubClass) {
+				
+				Item.StackCount--;
+				if (Item.StackCount <= 0) {
+
+					InventoryItems.RemoveAt(Index);
+				}
+				break;
+			}
+			Index++;
+		}
+		UpdateInventoryWidget(InventoryItems);
 	}
 }
 
-
-
 void AGillie::UpdatePlayerStats(float NewHunger, float NewHealth)
 {
+}
+
+void AGillie::Inventory_Items()
+{
+	if (InventoryItems.Num()) 
+	{
+		AddItemToInventoryWidget(InventoryItems[InventoryItems.Num() - 1]);
+	}
+	else {
+		AddItemToInventoryWidget(FItem_Information());
+	}
+	
 }
 
 void AGillie::AddHealth(float Value)
@@ -234,5 +260,34 @@ void AGillie::StartAttack()
 
 void AGillie::StopAttack()
 {
+}
+
+void AGillie::AddInventoryItem(FItem_Information Item_Info)
+{
+	bool bIsNewItem = true;
+	
+	for (FItem_Information& Item : InventoryItems) {
+		UE_LOG(LogTemp, Warning, TEXT("FOR EACH"));
+		if (Item.ItemClass == Item_Info.ItemClass) {
+			++Item.StackCount;
+			
+			bIsNewItem = false;
+			UE_LOG(LogTemp, Warning, TEXT("Stacking"));
+			break;
+		}
+	}
+
+	if (bIsNewItem) {
+		UE_LOG(LogTemp, Warning, TEXT("New"));
+		InventoryItems.Add(Item_Info);
+		Inventory_Items();
+	}
+	else
+	{
+		UpdateInventoryWidget(InventoryItems);
+	}
+	
+	
+	
 }
 
