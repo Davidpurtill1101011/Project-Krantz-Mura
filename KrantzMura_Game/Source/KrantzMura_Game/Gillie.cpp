@@ -41,17 +41,28 @@ AGillie::AGillie()
 
 	// loading the montage
 	static ConstructorHelpers::FObjectFinder<UAnimMontage>FightingMontageObj(TEXT("AnimMontage'/Game/Mannequin/Animations/Fighting/FIghting.FIghting'"));
-
 	if (FightingMontageObj.Succeeded()) {// if this succecds we then can use the animation that has been made over in UE(Unreal Engine Editor)
 		FightingMontage = FightingMontageObj.Object;
 	}
+
+	LeftFistCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("LeftFistCollisionBox"));
+	LeftFistCollision->SetupAttachment(RootComponent);
+	LeftFistCollision->SetCollisionProfileName("NoCollision");
+
+
+	RightFistCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("RightFistCollisionBox"));
+	RightFistCollision->SetupAttachment(RootComponent);
+	RightFistCollision->SetCollisionProfileName("NoCollision");
 }
 
 // Called when the game starts or when spawned
 void AGillie::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	//collision components attach to sockets on transform definitions 
+	const FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, false);
+	LeftFistCollision->AttachToComponent(GetMesh(), AttachmentRules, "left_fist_col");
+	RightFistCollision->AttachToComponent(GetMesh(), AttachmentRules, "right_fist_col");
 }
 
 // Called every frame
@@ -87,7 +98,7 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Walking", IE_Released, this, &AGillie::StopWalking);
 
 	// binding the action buttons
-	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &AGillie::StartAttack);
+	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &AGillie::AttackInput);
 	PlayerInputComponent->BindAction("Attack", IE_Released, this, &AGillie::StopAttack);
 }
 
@@ -245,21 +256,30 @@ void AGillie::ItemInteract()
 	if (GetWorld()->LineTraceSingleByChannel(Hit, Start, End, ECC_Visibility, Params)) {
 		if (IInteractableInterface* Interface = Cast<IInteractableInterface>(Hit.GetActor())) {
 			Interface->Interact(this);
-
 		}
 	}
 }
 
 void AGillie::StartAttack()
 {
-	// adding a random function to concat onto Start so when M1 is clicked it will pick 1 or 2 and throw a different style punch
-	int PunchIndex = rand() % 2 + 1;
-	FString MontageSection = "Start_" + FString::FromInt(PunchIndex);
-	PlayAnimMontage(FightingMontage, 1.f, FName(*MontageSection)); // plays the animations, how fast the animations run 
+	UE_LOG(LogTemp, Warning, TEXT("ATTACK STARTED"));
+	LeftFistCollision->SetCollisionProfileName("Weapon");
+	RightFistCollision->SetCollisionProfileName("Weapon");
 }
 
 void AGillie::StopAttack()
 {
+	LeftFistCollision->SetCollisionProfileName("NoCollision");
+	RightFistCollision->SetCollisionProfileName("NoCollision");
+}
+
+void AGillie::AttackInput()
+{
+	// when M1 is clicked it will pick 1 or 2 and throw a different style punch
+	int PunchIndex = rand() % 2 + 1;
+	//and add a random function to concat onto Start_
+	FString MontageSection = "Start_" + FString::FromInt(PunchIndex);
+	PlayAnimMontage(FightingMontage, .8f, FName(*MontageSection)); // plays the animations, how fast the animations run 
 }
 
 void AGillie::AddInventoryItem(FItem_Information Item_Info)

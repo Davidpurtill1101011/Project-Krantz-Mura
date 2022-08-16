@@ -34,6 +34,10 @@ Global
 		Shipping|Win32 = Shipping|Win32
 		Shipping|Win64 = Shipping|Win64
 	EndGlobalSection
+	# Visual Assist Section
+	GlobalSection(44630d46-96b5-488c-8df926e21db8c1a3) = preSolution
+		ueSolution=true
+	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{8AB0E1C1-67A0-4875-8BC6-A87C289DCAE7}.DebugGame Editor|IOS.ActiveCfg = Invalid|Win32
 		{8AB0E1C1-67A0-4875-8BC6-A87C289DCAE7}.DebugGame Editor|Win32.ActiveCfg = Invalid|Win32
@@ -81,13 +85,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{8AB0E1C1-67A0-4875-8BC6-A87C289DCAE7} = {8E2F6A87-1826-34F4-940C-CC23A48F9FE4}
 		{49D55FE7-1AD0-43CD-A44C-AC9F9D5982F1} = {94A6C6F3-99B3-346E-9557-ABF9D4064DBD}
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {55A0AC60-7008-42D8-B673-BB2BE6BD4206}
-	EndGlobalSection
-	GlobalSection(44630d46-96b5-488c-8df926e21db8c1a3) = preSolution
-		ueSolution = true
+		{8AB0E1C1-67A0-4875-8BC6-A87C289DCAE7} = {8E2F6A87-1826-34F4-940C-CC23A48F9FE4}
 	EndGlobalSection
 EndGlobal
