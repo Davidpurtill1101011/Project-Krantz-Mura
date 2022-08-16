@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-
+#include <Components/BoxComponent.h>
 #include <Components/InputComponent.h>
 #include <GameFramework/Controller.h>
 #include <GameFramework/CharacterMovementComponent.h>
@@ -42,6 +42,13 @@ public:
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation")
 		class UAnimMontage* FightingMontage; // this lets bid to the blueprint via C++ code
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Collision)
+		class UBoxComponent* LeftFistCollision;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Collision)
+		class UBoxComponent* RightFistCollision;
+
 
 	UPROPERTY(BlueprintReadWrite, Category= "Health")
 		float Health;
@@ -88,6 +95,7 @@ public:
 	// functions for fighting
 	void StartAttack();
 	void StopAttack();
+	void AttackInput();
 
 	// for the inventory system
 	void AddInventoryItem(FItem_Information Item_Info);
