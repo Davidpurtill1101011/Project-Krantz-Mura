@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include <Components/BoxComponent.h>
 #include <Components/InputComponent.h>
+#include <Sound/SoundCue.h>
+#include <Components/AudioComponent.h>
 #include <GameFramework/Controller.h>
 #include <GameFramework/CharacterMovementComponent.h>
 #include <Camera/CameraComponent.h>
@@ -56,6 +58,10 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "Health")
 		float Hunger;
 
+	// sound cue
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio);
+	class USoundCue* PunchSoundCue;
+
 	//FUNCTIONS
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
 		void AddItemToInventoryWidget(FItem_Information ItemData);
@@ -96,6 +102,8 @@ public:
 	void StartAttack();
 	void StopAttack();
 	void AttackInput();
+	UFUNCTION()
+		void AttackHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
 	// for the inventory system
 	void AddInventoryItem(FItem_Information Item_Info);
@@ -105,6 +113,8 @@ protected:
 	virtual void BeginPlay() override;
 private:
 	FGenericTeamId TeamId;
+
+	UAudioComponent* PunchAudioComponent;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

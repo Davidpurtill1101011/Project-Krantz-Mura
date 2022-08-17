@@ -45,6 +45,16 @@ AGillie::AGillie()
 		FightingMontage = FightingMontageObj.Object;
 	}
 
+	// sound cue
+	static ConstructorHelpers::FObjectFinder<USoundCue>PunchSoundCueObject(TEXT("SoundCue'/Game/Other_Assets/Sounds/PunchSoundQue.PunchSoundQue'"));
+	if (PunchSoundCueObject.Succeeded()) {
+		PunchSoundCue = PunchSoundCueObject.Object;
+		PunchAudioComponent = CreateDefaultSubobject<UAudioComponent>(TEXT("PunchAudioComponent"));
+		PunchAudioComponent->SetupAttachment(RootComponent);
+
+	}
+
+	//Fist Colliders 
 	LeftFistCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("LeftFistCollisionBox"));
 	LeftFistCollision->SetupAttachment(RootComponent);
 	LeftFistCollision->SetCollisionProfileName("NoCollision");
@@ -53,16 +63,31 @@ AGillie::AGillie()
 	RightFistCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("RightFistCollisionBox"));
 	RightFistCollision->SetupAttachment(RootComponent);
 	RightFistCollision->SetCollisionProfileName("NoCollision");
+	PunchAudioComponent->bAutoActivate = false;
+	if (PunchAudioComponent && PunchSoundCue) {
+		PunchAudioComponent->SetSound(PunchSoundCue);
+	}
 }
 
 // Called when the game starts or when spawned
 void AGillie::BeginPlay()
 {
 	Super::BeginPlay();
+
 	//collision components attach to sockets on transform definitions 
 	const FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, false);
 	LeftFistCollision->AttachToComponent(GetMesh(), AttachmentRules, "left_fist_col");
+	LeftFistCollision->OnComponentHit.AddDynamic(this, &AGillie::AttackHit);
+	LeftFistCollision->SetNotifyRigidBodyCollision(false);
+
+
+
+	RightFistCollision->OnComponentHit.AddDynamic(this, &AGillie::AttackHit);
 	RightFistCollision->AttachToComponent(GetMesh(), AttachmentRules, "right_fist_col");
+	RightFistCollision->SetNotifyRigidBodyCollision(false);
+
+	
+
 }
 
 // Called every frame
@@ -262,15 +287,25 @@ void AGillie::ItemInteract()
 
 void AGillie::StartAttack()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ATTACK STARTED"));
 	LeftFistCollision->SetCollisionProfileName("Weapon");
+	LeftFistCollision->SetNotifyRigidBodyCollision(true);
+	LeftFistCollision->SetGenerateOverlapEvents(true);
+
 	RightFistCollision->SetCollisionProfileName("Weapon");
+	RightFistCollision->SetNotifyRigidBodyCollision(true);
+	RightFistCollision->SetGenerateOverlapEvents(true);
 }
 
 void AGillie::StopAttack()
 {
 	LeftFistCollision->SetCollisionProfileName("NoCollision");
+	LeftFistCollision->SetNotifyRigidBodyCollision(false);
+	LeftFistCollision->SetGenerateOverlapEvents(false);
+
+
 	RightFistCollision->SetCollisionProfileName("NoCollision");
+	RightFistCollision->SetNotifyRigidBodyCollision(false);
+	RightFistCollision->SetGenerateOverlapEvents(false);
 }
 
 void AGillie::AttackInput()
@@ -280,6 +315,15 @@ void AGillie::AttackInput()
 	//and add a random function to concat onto Start_
 	FString MontageSection = "Start_" + FString::FromInt(PunchIndex);
 	PlayAnimMontage(FightingMontage, .8f, FName(*MontageSection)); // plays the animations, how fast the animations run 
+}
+
+void AGillie::AttackHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
+{
+	if (PunchAudioComponent && !PunchAudioComponent->IsPlaying()) {
+
+		PunchAudioComponent->SetPitchMultiplier(FMath::RandRange(1.0f, 3.0f));
+		PunchAudioComponent->Play(0.f);
+	}
 }
 
 void AGillie::AddInventoryItem(FItem_Information Item_Info)
