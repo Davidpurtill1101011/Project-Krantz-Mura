@@ -331,12 +331,16 @@ void AGillie::AddInventoryItem(FItem_Information Item_Info)
 	bool bIsNewItem = true;
 	
 	for (FItem_Information& Item : InventoryItems) {
-		UE_LOG(LogTemp, Warning, TEXT("FOR EACH"));
+		
 		if (Item.ItemClass == Item_Info.ItemClass) {
-			++Item.StackCount;
+			if (Item_Info.StackCount > 1) {
+				Item.StackCount += Item_Info.StackCount;
+			}
+			else {
+				++Item.StackCount;
+			}
 			
 			bIsNewItem = false;
-			UE_LOG(LogTemp, Warning, TEXT("Stacking"));
 			break;
 		}
 	}
