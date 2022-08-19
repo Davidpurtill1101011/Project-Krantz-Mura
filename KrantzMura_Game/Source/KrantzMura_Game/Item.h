@@ -22,7 +22,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Intventory Item")
 		class UStaticMeshComponent* ItemMesh;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Intventory Item")
+	UPROPERTY(EditAnywhere, Category = "Intventory Item")
 		FItem_Information ItemData;
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;	
