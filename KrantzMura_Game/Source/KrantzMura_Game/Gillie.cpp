@@ -162,11 +162,9 @@ void AGillie::Inventory_Items()
 {
 	if (InventoryItems.Num()) 
 	{
-		AddItemToInventoryWidget(InventoryItems[InventoryItems.Num() - 1]);
+		AddItemToInventoryWidget(InventoryItems[InventoryItems.Num() - 1], InventoryItems);
 	}
-	else {
-		AddItemToInventoryWidget(FItem_Information());
-	}
+	
 	
 }
 

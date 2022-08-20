@@ -64,7 +64,7 @@ public:
 
 	//FUNCTIONS
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
-		void AddItemToInventoryWidget(FItem_Information ItemData);
+		void AddItemToInventoryWidget(FItem_Information ItemData, const TArray<FItem_Information>& CurrentInvent = TArray<FItem_Information>());
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
 		void UpdateInventoryWidget(const TArray<FItem_Information>& NewInventoryItems);
