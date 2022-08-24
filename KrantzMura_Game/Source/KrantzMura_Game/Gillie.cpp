@@ -4,6 +4,7 @@
 #include "Gillie.h"
 #include "Item.h"
 #include <KrantzMura_Game/Public/InteractableInterface.h>
+#include <KrantzMura_Game/Public/WeaponBase.h>
 
 
 // Sets default values
@@ -67,12 +68,32 @@ AGillie::AGillie()
 	if (PunchAudioComponent && PunchSoundCue) {
 		PunchAudioComponent->SetSound(PunchSoundCue);
 	}
+	//weapon setup
+	static ConstructorHelpers::FObjectFinder<UAnimMontage>SwordMontageObj(TEXT("AnimMontage'/Game/Mannequin/Animations/Fighting/SwordAnim.SwordAnim'"));
+	if (SwordMontageObj.Succeeded()) {
+		SwordMontage = SwordMontageObj.Object;
+	}
+
+	
 }
 
 // Called when the game starts or when spawned
 void AGillie::BeginPlay()
 {
 	Super::BeginPlay();
+	FActorSpawnParameters SpawnParams;
+	
+	if (WeaponClass) {
+		SpawnParams.bNoFail = true;
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+		FTransform WeaponTransform;
+		WeaponTransform.SetLocation(FVector::ZeroVector);
+		WeaponTransform.SetRotation(FQuat(FRotator::ZeroRotator));
+		Weapon = GetWorld()->SpawnActor<AWeaponBase>(WeaponClass, WeaponTransform, SpawnParams);
+		if (Weapon) {
+			Weapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, FName("right_fist_col"));
+		}
+	}
 
 	//collision components attach to sockets on transform definitions 
 	const FAttachmentTransformRules AttachmentRules(EAttachmentRule::SnapToTarget, EAttachmentRule::SnapToTarget, EAttachmentRule::KeepWorld, false);
@@ -85,9 +106,6 @@ void AGillie::BeginPlay()
 	RightFistCollision->OnComponentHit.AddDynamic(this, &AGillie::AttackHit);
 	RightFistCollision->AttachToComponent(GetMesh(), AttachmentRules, "right_fist_col");
 	RightFistCollision->SetNotifyRigidBodyCollision(false);
-
-	
-
 }
 
 // Called every frame
@@ -125,6 +143,12 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	// binding the action buttons
 	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &AGillie::AttackInput);
 	PlayerInputComponent->BindAction("Attack", IE_Released, this, &AGillie::StopAttack);
+
+	PlayerInputComponent->BindAction("WeaponAttack", IE_Pressed, this, &AGillie::WeaponAttack);
+	PlayerInputComponent->BindAction("WeaponAttack", IE_Released, this, &AGillie::StopAttack);
+
+	
+
 }
 
 void AGillie::ItemUse(TSubclassOf<AItem> ItemSubClass)
@@ -304,15 +328,28 @@ void AGillie::StopAttack()
 	RightFistCollision->SetCollisionProfileName("NoCollision");
 	RightFistCollision->SetNotifyRigidBodyCollision(false);
 	RightFistCollision->SetGenerateOverlapEvents(false);
+
+	Weapon->StopSlash();
 }
 
 void AGillie::AttackInput()
 {
-	// when M1 is clicked it will pick 1 or 2 and throw a different style punch
-	int PunchIndex = rand() % 2 + 1;
-	//and add a random function to concat onto Start_
-	FString MontageSection = "Start_" + FString::FromInt(PunchIndex);
-	PlayAnimMontage(FightingMontage, .8f, FName(*MontageSection)); // plays the animations, how fast the animations run 
+	if (WeaponClass == NULL) {	
+		// when M1 is clicked it will pick 1 or 2 and throw a different style punch
+		int PunchIndex = rand() % 2 + 1;
+		//and add a random function to concat onto Start_
+		FString MontageSection = "Start_" + FString::FromInt(PunchIndex);
+		PlayAnimMontage(FightingMontage, .8f, FName(*MontageSection)); // plays the animations, how fast the animations run 
+	}
+
+}
+
+void AGillie::WeaponAttack()
+{
+	Weapon->Slash();
+	int SwordIndex = rand() % 2 + 1;
+	FString SwordSwingMontage = "Start_" + FString::FromInt(SwordIndex);
+	PlayAnimMontage(SwordMontage, .5f, FName(*SwordSwingMontage));
 }
 
 void AGillie::AttackHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)

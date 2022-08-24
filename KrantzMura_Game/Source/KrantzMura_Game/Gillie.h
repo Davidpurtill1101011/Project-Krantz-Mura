@@ -16,6 +16,7 @@
 #include "Door.h"
 #include <GenericTeamAgentInterface.h>
 #include <KrantzMura_Game/Structs.h>
+#include <KrantzMura_Game/Public/WeaponBase.h>
 #include "Gillie.generated.h"
 
 
@@ -45,6 +46,10 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation")
 		class UAnimMontage* FightingMontage; // this lets bid to the blueprint via C++ code
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation")
+		class UAnimMontage* SwordMontage; // this lets bind to the blueprint via C++ code
+
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Collision)
 		class UBoxComponent* LeftFistCollision;
 
@@ -57,6 +62,8 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = "Health")
 		float Hunger;
+
+	
 
 	// sound cue
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio);
@@ -77,6 +84,14 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = "Inventory System")
 		TArray<FItem_Information> InventoryItems;
+
+	
+
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AWeaponBase> WeaponClass;
+
+	class AWeaponBase* Weapon;
+	
 
 	UFUNCTION()
 		void Inventory_Items();
@@ -102,6 +117,10 @@ public:
 	void StartAttack();
 	void StopAttack();
 	void AttackInput();
+
+	void WeaponAttack();
+	
+	
 	UFUNCTION()
 		void AttackHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 
