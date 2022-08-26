@@ -64,6 +64,12 @@ void AAI_PatrolGuard_Controller::Tick(float DeltaSeconds)
 	else if (isPlayerDetected == true) {
 		AGillie* Player = Cast<AGillie>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 		MoveToActor(Player, 5.0f);
+		if (PlayerDistance < 105.0f) {
+			UE_LOG(LogTemp, Warning, TEXT("Attacking something"));
+			MyCharacter->AttackPlayer();
+		}
+		
+
 	}
 }
 
