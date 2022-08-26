@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include <Perception/AISightTargetInterface.h>
+#include <KrantzMura_Game/Public/WeaponBase.h>
 #include <GenericTeamAgentInterface.h>
 #include "AI_GuardPatrol_Character.generated.h"
 
@@ -23,8 +24,19 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
 		int32 ID = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI") 
 		bool Attack = false;
+		
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation")
+		class UAnimMontage* SwordMontage; // this lets bind to the blueprint via C++ code
+
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AWeaponBase> WeaponClass;
+
+	class AWeaponBase* Weapon;
+
+	void AttackPlayer();
 
 	virtual FGenericTeamId GetGenericTeamId() const override { return TeamId; }
 
