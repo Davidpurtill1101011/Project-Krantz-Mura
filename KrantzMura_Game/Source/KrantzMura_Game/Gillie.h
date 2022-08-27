@@ -63,7 +63,8 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "Health")
 		float Hunger;
 
-	
+	float PlayerHealth = 0;
+	float DefaultHealth = 100;
 
 	// sound cue
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = Audio);
@@ -85,14 +86,11 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = "Inventory System")
 		TArray<FItem_Information> InventoryItems;
 
-	
-
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AWeaponBase> WeaponClass;
 
 	class AWeaponBase* Weapon;
 	
-
 	UFUNCTION()
 		void Inventory_Items();
 
@@ -143,4 +141,5 @@ public:
 
 	virtual FGenericTeamId GetGenericTeamId() const override { return TeamId; }
 
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 };

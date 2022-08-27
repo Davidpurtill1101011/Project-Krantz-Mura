@@ -25,6 +25,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadonly, Category = "Collision")
 		class UBoxComponent* SwordCollisionBox;
 
+
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -33,4 +35,5 @@ public:
 	void Slash();
 	void StopSlash();
 
+	
 };

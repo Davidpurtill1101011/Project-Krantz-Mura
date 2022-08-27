@@ -53,6 +53,8 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		class AAI_GuardPatrol_Character* Guard;
 
+	class AWeaponBase* Weapon;
+
 	virtual FGenericTeamId GetGenericTeamId() const override { return TeamId; }
 	
 protected:

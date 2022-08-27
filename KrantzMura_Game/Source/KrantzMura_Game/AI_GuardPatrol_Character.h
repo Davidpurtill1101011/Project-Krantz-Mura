@@ -36,7 +36,13 @@ public:
 
 	class AWeaponBase* Weapon;
 
+	float AIHealth = 0;
+	float DefaultHealth = 100;
+
 	void AttackPlayer();
+	void DontAttackPlayer();
+
+
 
 	virtual FGenericTeamId GetGenericTeamId() const override { return TeamId; }
 
@@ -51,5 +57,7 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
 };

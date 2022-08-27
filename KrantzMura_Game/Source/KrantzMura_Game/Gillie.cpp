@@ -13,6 +13,8 @@ AGillie::AGillie()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
+	PlayerHealth = DefaultHealth;
+
 	// controller rotates the player and not the mouse
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
@@ -148,6 +150,23 @@ void AGillie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("WeaponAttack", IE_Released, this, &AGillie::StopAttack);
 
 	
+
+}
+
+float AGillie::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	PlayerHealth -= DamageAmount;
+	UE_LOG(LogTemp, Warning, TEXT("Health: %f"), PlayerHealth);
+
+	if (PlayerHealth <= 0) 
+	{
+		//Destroy();
+		UE_LOG(LogTemp, Warning, TEXT("Health Depleted: %f"), PlayerHealth);
+	}
+
+
+
+	return DamageAmount;
 
 }
 
