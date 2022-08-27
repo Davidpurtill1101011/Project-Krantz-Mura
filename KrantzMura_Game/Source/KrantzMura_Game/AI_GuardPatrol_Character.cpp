@@ -3,11 +3,14 @@
 
 #include "AI_GuardPatrol_Character.h"
 #include <GameFramework/CharacterMovementComponent.h>
+#include <KrantzMura_Game/Gillie.h>
 // Sets default values
 AAI_GuardPatrol_Character::AAI_GuardPatrol_Character()
 {
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
+	AIHealth = DefaultHealth;
 
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationRoll = false;
@@ -64,6 +67,39 @@ void AAI_GuardPatrol_Character::AttackPlayer()
 	
 	//FString SwordSwingMontage = "Start_";
 	PlayAnimMontage(SwordMontage, .5f, FName("Start_1"));
+	Weapon->SwordCollisionBox->SetCollisionProfileName("Weapon");
+	TArray<AActor*> OverLappingActors;
+	Weapon->SwordCollisionBox->GetOverlappingActors(OverLappingActors);
+	for (AActor* Actor : OverLappingActors) {
+		if (Actor) {
+			if (AGillie* Character = Cast<AGillie>(Actor)) {
+				Character->TakeDamage(10.0f, FDamageEvent(), nullptr, this);
+			}
+			
+		}
+	}
+	UE_LOG(LogTemp, Warning, TEXT("Attacked"));
 	
+	
+}
+
+void AAI_GuardPatrol_Character::DontAttackPlayer()
+{
+	Weapon->StopSlash();
+}
+
+
+
+float AAI_GuardPatrol_Character::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	AIHealth -= DamageAmount;
+	UE_LOG(LogTemp, Warning, TEXT("Health: %f"), AIHealth);
+
+	if (AIHealth <= 0)
+	{
+		//Destroy();
+		UE_LOG(LogTemp, Warning, TEXT("AIHealth Depleted: %f"), AIHealth);
+	}
+	return DamageAmount;
 }
 
