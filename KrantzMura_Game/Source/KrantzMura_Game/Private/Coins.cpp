@@ -8,6 +8,7 @@ ACoins::ACoins() {
 
 }
 
-void ACoins::Use(AGillie* Character)
+void ACoins::Use(AGillie* Character, bool IsInShop)
 {
+
 }

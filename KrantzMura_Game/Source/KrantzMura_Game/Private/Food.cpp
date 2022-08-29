@@ -10,9 +10,11 @@ AFood::AFood()
 	ItemData.ItemClass = StaticClass();
 }
 
-void AFood::Use(AGillie* Character)
+void AFood::Use(AGillie* Character, bool IsInShop)
 {
-	if (Character) {
+	Super::Use(Character, IsInShop);
+
+	if (Character && !IsInShop) {
 		UE_LOG(LogTemp, Warning, TEXT("FOOD"));
 		Character->RemoveHunger(HungerPoints);
 	}

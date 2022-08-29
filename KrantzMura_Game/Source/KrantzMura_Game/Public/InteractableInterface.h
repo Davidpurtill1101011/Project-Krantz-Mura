@@ -23,5 +23,5 @@ class KRANTZMURA_GAME_API IInteractableInterface
 public:
 	virtual void Interact(AGillie* Character) = 0;
 
-	virtual void Use(AGillie* Character) {}
+	virtual void Use(AGillie* Character, bool IsInShop = false) {}
 };

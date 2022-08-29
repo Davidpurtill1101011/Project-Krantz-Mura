@@ -14,6 +14,6 @@ class KRANTZMURA_GAME_API ACoins : public AItem
 	GENERATED_BODY()
 public:
 	ACoins();
-	virtual void Use(AGillie* Character) override;
+	virtual void Use(AGillie* Character, bool IsInShop = false) override;
 	
 };

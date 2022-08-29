@@ -17,11 +17,12 @@
 #include <GenericTeamAgentInterface.h>
 #include <KrantzMura_Game/Structs.h>
 #include <KrantzMura_Game/Public/WeaponBase.h>
+#include <KrantzMura_Game/Public/ShopKeeper.h>
 #include "Gillie.generated.h"
 
 
 class AItem;
-
+class AShopKeeper;
 UCLASS()
 class KRANTZMURA_GAME_API AGillie : public ACharacter, public IGenericTeamAgentInterface
 {
@@ -78,7 +79,7 @@ public:
 		void UpdateInventoryWidget(const TArray<FItem_Information>& NewInventoryItems);
 
 	UFUNCTION(BlueprintCallable, Category = "Inventory System")
-		void ItemUse(TSubclassOf<AItem> ItemSubClass);
+		void ItemUse(TSubclassOf<AItem> ItemSubClass, AShopKeeper* AShopKeeper, bool IsShopItem = false);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Inventory System")
 		void UpdatePlayerStats(float NewHunger, float NewHealth);
@@ -88,6 +89,9 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AWeaponBase> WeaponClass;
+
+	UFUNCTION(BlueprintImplementableEvent)
+		void OpenShop(AShopKeeper* ShopOwner, const TArray<FItem_Information>& Items);
 
 	class AWeaponBase* Weapon;
 	

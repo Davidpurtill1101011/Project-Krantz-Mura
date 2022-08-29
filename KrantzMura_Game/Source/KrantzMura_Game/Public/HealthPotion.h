@@ -18,5 +18,5 @@ protected:
 	UPROPERTY(EditAnywhere)
 		float HealthPoints;
 public:
-	virtual void Use(AGillie* Character) override;
+	virtual void Use(AGillie* Character, bool IsInShop = false) override;
 };

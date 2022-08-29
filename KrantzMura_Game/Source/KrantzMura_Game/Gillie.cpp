@@ -75,8 +75,6 @@ AGillie::AGillie()
 	if (SwordMontageObj.Succeeded()) {
 		SwordMontage = SwordMontageObj.Object;
 	}
-
-	
 }
 
 // Called when the game starts or when spawned
@@ -160,7 +158,7 @@ float AGillie::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, A
 
 	if (PlayerHealth <= 0) 
 	{
-		//Destroy();
+		Destroy();
 		UE_LOG(LogTemp, Warning, TEXT("Health Depleted: %f"), PlayerHealth);
 	}
 
@@ -170,29 +168,38 @@ float AGillie::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, A
 
 }
 
-void AGillie::ItemUse(TSubclassOf<AItem> ItemSubClass)
+void AGillie::ItemUse(TSubclassOf<AItem> ItemSubClass, AShopKeeper* AShopKeeper, bool IsShopItem)
 {
 	
 	if (ItemSubClass) {
 		
 		if (AItem* OnUseItem = ItemSubClass.GetDefaultObject()) {
 			
-			OnUseItem->Use(this);
+			OnUseItem->Use(this, IsShopItem);
 		}
-		uint8 Index = 0;
-		for (FItem_Information& Item : InventoryItems) {
 
-			if (Item.ItemClass == ItemSubClass) {
-				
-				Item.StackCount--;
-				if (Item.StackCount <= 0) {
+		if (!AShopKeeper) {
+			uint8 Index = 0;
+			for (FItem_Information& Item : InventoryItems) {
 
-					InventoryItems.RemoveAt(Index);
+				if (Item.ItemClass == ItemSubClass) {
+
+					Item.StackCount--;
+					if (Item.StackCount <= 0) {
+
+						InventoryItems.RemoveAt(Index);
+					}
+					break;
 				}
-				break;
+				Index++;
 			}
-			Index++;
 		}
+		else {
+			AShopKeeper->ItemTransfer(ItemSubClass);
+		}
+		
+			
+
 		UpdateInventoryWidget(InventoryItems);
 	}
 }
@@ -200,6 +207,8 @@ void AGillie::ItemUse(TSubclassOf<AItem> ItemSubClass)
 void AGillie::UpdatePlayerStats(float NewHunger, float NewHealth)
 {
 }
+
+
 
 void AGillie::Inventory_Items()
 {

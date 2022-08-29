@@ -32,8 +32,11 @@ void AItem::Interact(class AGillie* Character)
 	Destroy();
 }
 
-void AItem::Use(AGillie* Character)
+void AItem::Use(AGillie* Character, bool IsInShop)
 {
+	if (Character && IsInShop) {
+		Character->AddInventoryItem(ItemData);
+	}
 	UE_LOG(LogTemp, Warning, TEXT("USING ITEM: %s"), *GetName());
 }
 
