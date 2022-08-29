@@ -10,9 +10,11 @@ AHealthPotion::AHealthPotion()
 	ItemData.ItemClass = StaticClass();
 }
 
-void AHealthPotion::Use(AGillie* Character)
+void AHealthPotion::Use(AGillie* Character, bool IsInShop)
 {
-	if (Character) {
+	Super::Use(Character, IsInShop);
+
+	if (Character && !IsInShop) {
 		Character->AddHealth(HealthPoints);
 	}
 }
